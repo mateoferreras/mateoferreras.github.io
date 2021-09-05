@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on mateoferreras.es</title>
+    <link>https://mateoferreras.es/tags/windows/</link>
+    <description>Recent content in Windows on mateoferreras.es</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Aug 2019 18:00:00 +0100</lastBuildDate><atom:link href="https://mateoferreras.es/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Restablecer la contraseña DSRM</title>
+      <link>https://mateoferreras.es/post/2019/08/resetear-contrasena-dsrm/</link>
+      <pubDate>Thu, 15 Aug 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/08/resetear-contrasena-dsrm/</guid>
+      <description>
+        
+          &lt;p&gt;La contraseña del Modo de restauración de servicios de directorio (DSRM) es necesaria para iniciar sesión en un controlador de dominio cuando no se ejecutan los Servicios de dominio de Active Directory (AD DS), bien porque se han detenido o porque el controlador de dominio se ha iniciado en Directory Services Restore Mode (DSRM).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota&lt;/strong&gt;&lt;/br&gt;
+La contraseña de DSRM no es la contraseña de la cuenta del administrador del dominio.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Puede que en su momento no se realizase la documentación apropiada y que con el paso del tiempo se perdiese la contraseña, quizás nos vemos en la necesidad de restablecer la contraseña del Modo de restauración de servicios de directorio (DSRM) por un riesgo de seguridad. Para lo cual seria aplicar el proceso que siguiente.&lt;/p&gt;
+&lt;h2 id=&#34;restablecer-la-contraseña-de-administrador-de-dsrm&#34;&gt;Restablecer la contraseña de administrador de DSRM&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Ejecutamos un símbolo del sistema como administrador.&lt;/li&gt;
+&lt;li&gt;Escribimos &lt;code&gt;ntdsutil&lt;/code&gt; y, a continuación, pulsamos &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;En el símbolo del sistema de &lt;strong&gt;NTDSUTIL&lt;/strong&gt;, escribimos &lt;code&gt;set dsrm password&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;En el símbolo del sistema de &lt;strong&gt;DSRM&lt;/strong&gt;, escribimos una de las siguientes líneas en función de nuestro objetivo:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Para restablecer la contraseña en el servidor en el que estamos trabajando, escribimos &lt;code&gt;reset password on server null&lt;/code&gt;. &lt;em&gt;La variable &lt;strong&gt;NULL&lt;/strong&gt; indica que la contraseña de DSRM se está restableciendo en el servidor local&lt;/em&gt;. Escribimos la nueva contraseña cuando nos la solicita.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Para restablecer la contraseña en un servidor remoto, escribimos &lt;code&gt;reset password on server servername&lt;/code&gt;, &lt;em&gt;donde la variable &lt;strong&gt;SERVERNAME&lt;/strong&gt; es el nombre DNS del servidor en el que queremos restablecer la contraseña de DSRM&lt;/em&gt;. Escribimos la nueva contraseña cuando nos la solicita.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;En el símbolo del sistema &lt;strong&gt;DSRM&lt;/strong&gt;, escribimos &lt;code&gt;q&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;En el símbolo del sistema de &lt;strong&gt;NTDSUTIL&lt;/strong&gt;, escribimos &lt;code&gt;q&lt;/code&gt; para salir.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/08/cmd-ntdsutil.gif&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Accedemos al servidor en modo restauración:&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/08/restore-mode.gif&#34;&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;enlaces&#34;&gt;Enlaces:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://technet.microsoft.com/es-es/library/cc754363(v=ws.10).aspx&#34;&gt;set DSRM password&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://blogs.technet.microsoft.com/meamcs/2012/05/29/reset-the-dsrm-administrator-password/&#34;&gt;Reset the DSRM Administrator Password&lt;/a&gt;&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Deshabilitar IPv6 en Windows</title>
+      <link>https://mateoferreras.es/post/2019/04/deshabilitar-ipv6-windows/</link>
+      <pubDate>Sun, 07 Apr 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/04/deshabilitar-ipv6-windows/</guid>
+      <description>
+        
+          &lt;p&gt;Desde el lanzamiento de Windows Server 2008 y Windows Vista viene integrado en los adaptadores de red Microsoft el protocolo IPv6.&lt;/p&gt;
+&lt;p&gt;Por diferentes motivos puede ser necesario deshabilitar el citado protocolo en alguno o la totalidad de los sistemas de nuestro entorno.&lt;/p&gt;
+&lt;p&gt;Para deshabilitar el protocolo de manera correcta, Microsoft nos facilita la siguiente &lt;a href=&#34;https://support.microsoft.com/es-es/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users&#34;&gt;Guía para configurar IPv6 en Windows para usuarios avanzados&lt;/a&gt;. Ya que si desmarcamos unicamente la opción de Protocolo de Internet versión 6 (TCP /IPv6), en las propiedades del adaptador de red, no se deshabilita completamente el uso del protocolo.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/adaptador.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Parámetros:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    Location: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\
+    Name: DisabledComponents
+    Type: REG_DWORD
+    Min Value: 0x00
+    Max Value: 0xFF (IPv6 disabled)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;pasos-para-deshabilitar-ipv6&#34;&gt;Pasos para deshabilitar IPv6.&lt;/h2&gt;
+&lt;p&gt;1.- El primer paso es la modificación del registro del sistema, que se puede realizar de las siguientes maneras:&lt;/p&gt;
+&lt;p&gt;a.- Desde la consola del editor del registro (ejecutando como administrador):&lt;/br&gt;
+Abrimos el editor de Registro.&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/regedit.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Navegamos a la ruta:&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/regedit_ruta.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Añadimos Elemento:&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/regedit_dword.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;b.- Desde CMD (ejecutando como administrador):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    reg add &amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters&amp;quot; /v DisabledComponents /t REG_DWORD /d 0xFF /f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;c.- Desde PowerShell (ejecutando como administrador):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    New-ItemProperty &amp;quot;HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\&amp;quot; -Name DisabledComponents -Value 0xFF -PropertyType DWord
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;2.- Una vez aplicada la modificación a través del registro, ya podemos proceder a desmarcar la opción en las propiedades del adaptador.&lt;/br&gt;
+Para completar todo el proceso es necesario realizar un reinicio del sistema.&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/adaptaddor_disabled.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;En el enlace facilitado anteriormente se amplia la información. También están disponibles diferentes scripts que realizan la configuración del protocolo de manera mas personalizada según sean nuestras necesidades.&lt;/p&gt;
+&lt;h2 id=&#34;aplicarlo-mediante-políticas-de-grupo&#34;&gt;Aplicarlo mediante políticas de grupo:&lt;/h2&gt;
+&lt;p&gt;Con una GPP, podemos desplegar claves en el registro.
+Abrir el editor de Directivas de Grupo, en Herramientas administrativas o bien creando una nueva consola de administración con MMC.&lt;/p&gt;
+&lt;p&gt;Desplegar el bosque, el dominio, etc… hasta &lt;strong&gt;“Objetos de directiva de grupo“&lt;/strong&gt;. Botón derecho con el ratón, del menú seleccionar &lt;strong&gt;Nuevo&lt;/strong&gt;.&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_create.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Introducir un nombre descriptivo, por ejemplo: &lt;strong&gt;Disable_IPv6&lt;/strong&gt;. Hacer clic en el botón &lt;strong&gt;Aceptar&lt;/strong&gt;.&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_create_name.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Seleccionar la nueva directiva que se acaba de crear, botón derecho, seleccionar &lt;strong&gt;Editar…&lt;/strong&gt;.&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_edit.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Como la rama está dentro de &lt;code&gt;HKEY_LOCAL_MACHINE&lt;/code&gt;, corresponderá a una GPP de equipo:&lt;/br&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    Configuración de equipo &amp;gt; Preferencias &amp;gt; Configuración de Windows &amp;gt; Registro
+    Nuevo &amp;gt; Elemento del registro
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_edit_regedit.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Configuración de registro.&lt;/br&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_edit_regedit_create.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Finalmente, para aplicar los cambios al sistema operativo arrancado, &lt;strong&gt;se deben reiniciar los equipos&lt;/strong&gt;.&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Actualizaciones de Windows Server 2016 y proxy</title>
+      <link>https://mateoferreras.es/post/2019/03/actualizaciones-de-windows-server-2016-y-proxy/</link>
+      <pubDate>Thu, 21 Mar 2019 19:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/03/actualizaciones-de-windows-server-2016-y-proxy/</guid>
+      <description>
+        
+          &lt;p&gt;Cuando preparaba una nueva plantilla de servidor con Windows Server 2016, he tenido problemas con las actualizaciones de Windows.&lt;/p&gt;
+&lt;p&gt;Siempre recurro a actualizar a través de Windows Update para asegurarme que no me dejo parches pendientes.&lt;/p&gt;
+&lt;p&gt;En esta ocasión al realizar la comprobación se mostraban diferentes parches disponibles y comenzaba el proceso de descarga.&lt;/p&gt;
+&lt;p&gt;Como este proceso es largo, en este punto me desentiendo del proceso y lo reviso posteriormente, tras unas horas vuelvo a comprobar el Servidor y este se encuentra al 0% de descarga.&lt;/p&gt;
+&lt;p&gt;En este punto verifico que no me hubiese dejado el proxy sin configurar en el navegador.&lt;/p&gt;
+&lt;p&gt;Compruebo que el servidor tiene acceso a Internet.&lt;/p&gt;
+&lt;p&gt;Reinicio el servicio de Windows Update y vuelvo a lanzar la comprobación con el mismo resultado.&lt;/p&gt;
+&lt;p&gt;Tras una búsqueda en Internet localizo el siguiente enlace de Microsoft a parte de otros blogs donde se detalla el mismo error: &lt;a href=&#34;https://docs.microsoft.com/es-es/windows/deployment/update/windows-update-troubleshooting#problemas-relacionados-con-el-proxy-http&#34;&gt;Problemas relacionados con el Proxy HTTP&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Parece que con Windows Server 2016 y Windows 10, las actualizaciones no utilizan el proxy a nivel nivel de usuario y lo requieren a nivel de sistema.&lt;/p&gt;
+&lt;p&gt;Para lo cual basta con ejecutar uno de los siguientes comando en un símbolo del sistema con privilegios de Administrador.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    netsh winhttp import proxy source=ie
+    netsh winhttp set proxy &amp;lt;Proxy&amp;gt;:&amp;lt;Puerto&amp;gt;
+    set proxy &amp;lt;Proxy&amp;gt;:&amp;lt;Puerto&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Con el siguiente comando verificamos el estado:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    netsh winhttp show proxy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Tras la configuración del proxy del sistema reinicio nuevamente el servicio de Windows Update y relanzo la comprobación de parches.&lt;/p&gt;
+&lt;p&gt;En esta ocasión aparecen los parches y veo que progresa la descarga de los mismos.&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Agregar Features on Demand desde imagen ISO</title>
+      <link>https://mateoferreras.es/post/2019/03/features-on-demand-iso/</link>
+      <pubDate>Thu, 21 Mar 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/03/features-on-demand-iso/</guid>
+      <description>
+        
+          &lt;p&gt;Puede que en el entorno empresarial no funcione correctamente la instalación de las características opcionales (Features on Demand) de Windows.&lt;/p&gt;
+&lt;p&gt;Ya sea por las restricciones que se aplican a las redes o en función del diseño de la infraestructura.&lt;/p&gt;
+&lt;p&gt;En mi caso me he encontrado que al intentar agregar, en un equipo con Windows 10 versión 1809, la característica opcional Visor de XPS me daba un error.&lt;/p&gt;
+&lt;p&gt;Tras un intento de instalación que demora unos segundos, devuelve un mensaje de error de instalación, remitiéndote a contactar con el administrador.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/error.png&#34;&gt;
+&lt;/p&gt;
+Si intento realizar la instalación a través de PowerShell o DISM, también devuelve un error.  
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/error_dism.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;El problema en mi caso es debido a que el equipo Windows 10 se encuentra en una infraestructura System Center Configuration Manager. En la cual no esta habilitada la disponibilidad de las Características opcionales, por lo que el equipo intenta siempre ir al SCCM y no a Windows Update donde si están disponibles los binarios.&lt;/p&gt;
+&lt;p&gt;He conseguido realizar la instalación independiente desde una de las imágenes ISO.&lt;/p&gt;
+&lt;p&gt;Estas imagenes las tenemos disponibles si disponemos de una suscripción de MSDN o en el Volume Licensing Service Center.&lt;/p&gt;
+&lt;p&gt;Accedemos a nuestro Microsoft Volume Licensing Service Center y procedemos a descargar las imágenes ISO de los Features on Demand que correspondan a nuestra edición.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/vlcs_fod.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Elegimos las versión, de 32 bit o 64 bit según nos corresponda:&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/fod_1.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Descargables de 32 Bits.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/fod_32.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Descargables de 64 Bits.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/fod_64.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;La funcionalidad que queremos agregar se encuentra en el Disk 1.&lt;/p&gt;
+&lt;p&gt;Descargamos la imagen y montamos como unidad en el equipo, también podemos descomprimirlo en una carpeta local o de red.&lt;/p&gt;
+&lt;p&gt;Abrimos una ventana de Powershell con privilegios administrativos.&lt;/p&gt;
+&lt;p&gt;Ejecutamos el siguiente comando &lt;code&gt;DISM.EXE /Online /Add-package /PackagePath:&amp;lt;ruta del paquete&amp;gt;&lt;/code&gt; para agregar la característica.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/dism_inst.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Cuando acaba el proceso, podemos verificar que ya disponemos de la Característica.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/visor.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Y en este caso también como aplicación en el sistema.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/xps_app-1.png&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Es aplicable a las características FoD como las Herramientas RSAT a partir de la versión de Windows 10 1809.&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certificación on mateoferreras.es</title>
+    <link>https://mateoferreras.es/tags/certificaci%C3%B3n/</link>
+    <description>Recent content in Certificación on mateoferreras.es</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Mar 2019 18:00:00 +0100</lastBuildDate><atom:link href="https://mateoferreras.es/tags/certificaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft 365 Certified: Modern Desktop Administrator Associate</title>
+      <link>https://mateoferreras.es/post/2019/03/microsoft-365-certified-modern-desktop-administrator-associate/</link>
+      <pubDate>Fri, 22 Mar 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/03/microsoft-365-certified-modern-desktop-administrator-associate/</guid>
+      <description>
+        
+          &lt;p&gt;La primera quincena del año me presente a los exámenes de la certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/modern-desktop.aspx&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Estos exámenes los realice en el periodo beta, por lo que hasta esta pasada semana no publicaron los resultados de los mismos.&lt;/p&gt;
+&lt;p&gt;El resultado de ambos exámenes &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-100.aspx&#34;&gt;MD-100&lt;/a&gt; y &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101&lt;/a&gt; ha sido aprobado, consiguiendo la certificación asociada.&lt;/p&gt;
+&lt;p&gt;Certificado Modern Desktop Administrator:&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/mca_md.png&#34; alt=&#34;Certificado obtenido&#34;&gt;
+&lt;/p&gt;
+&lt;p&gt;Aunque el ecosistema de puestos de trabajo no es uno de los áreas que mas trato a nivel laboral.&lt;/p&gt;
+&lt;p&gt;Creo que con las nuevas certificaciones se premia mas un conocimiento global que de una tecnología especifica.&lt;/p&gt;
+&lt;p&gt;Buen comienzo del año y espero que sea la primera certificación de las habilidades que me planteo adquirir este año.&lt;/p&gt;
+
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Nueva certificación Azure</title>
+      <link>https://mateoferreras.es/post/2019/02/certificacion-azure/</link>
+      <pubDate>Thu, 21 Feb 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/02/certificacion-azure/</guid>
+      <description>
+        
+          &lt;p&gt;Navegando por la pagina de Pearson Vue he localizado un nuevo examen de certificación que tiene la nomenclatura:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wsr.pearsonvue.com/testtaker/registration/SelectExamPage.htm?actionMethod=testtaker%2Fregistration%2FSelectExamPage.xhtml%3AselectExamPageBean.selectExamSeriesAction%28%29&amp;amp;examSeriesId=39495&amp;amp;conversationId=616879&#34;&gt;AZ-500: Microsoft Azure Security Technologies&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;color:red&#34;&gt;ACTUALIZACIÓN 06/03/2019&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Todo apunta a una nueva certificación basada en roles centrada en la securización de Azure y sus servicios asociados.&lt;/p&gt;
+&lt;p&gt;Todavía desconozco si este examen completa una ruta como así hace el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-500.aspx&#34;&gt;MS-500: Microsoft 365 Security Administration&lt;/a&gt; en el entorno de Microsoft 365, que permite conseguir la certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-security-administrator.aspx&#34;&gt;Microsoft 365 Certified Security Administrator Associate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;El examen ya aparece visible en la pagina de Pearson Vue y tienen como fecha de programación inicial el próximo día 27 de Febrero de 2019.&lt;/p&gt;
+&lt;p&gt;De momento no he localizado mas información al respecto del contenido del examen o de los recursos disponibles de formación. Entiendo que los irán publicando en las próximas semanas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;color:red&#34;&gt;ACTUALIZACIÓN 06/03/2019&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;El examen ya no se encuentra disponible de la pagina de &lt;a href=&#34;http://www.pearsonvue.com/microsoft/exams/&#34;&gt;Pearson VUE&lt;/a&gt;, pero hoy esta activa la pagina de examen en el sitio de Microsoft.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-az-500.aspx&#34;&gt;EXAM AZ-500: Microsoft Azure Security Technologies (beta)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Estas son las habilidades medidas.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Manage Identity and Access (20-25%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure Microsoft Azure Active Directory for workloads
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Create App Registration, configure App Registration permission scopes, manage App Registration permission consent, configure Multi-Factor Authentication settings, manage Microsoft Azure AD directory groups, manage Microsoft Azure AD users, install and configure Microsoft Azure AD Connect, configure authentication methods, implement Conditional Access policies, configure Microsoft Azure AD identity protection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure Microsoft Azure AD Privileged Identity Management
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Monitor privileged access, configure Access Reviews, activate Privileged Identity Management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure Microsoft Azure tenant security
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Transfer Microsoft Azure subscriptions between Microsoft Azure AD tenants, manage API access to Microsoft Azure subscriptions and resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Implement Platform Protection (35-40%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement network security
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure virtual network connectivity, configure Network Security Groups (NSGs), create and configure Microsoft Azure Firewall, create and configure application security groups, configure remote access management, configure baseline, configure resource firewall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement host security
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure endpoint security within the VM, configure VM security, harden VMs in Microsoft Azure, configure system updates for VMs in Microsoft Azure, configure baseline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure container security
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure network, configure authentication, configure container isolation, configure AKS security, configure container registry, configure container instance security, implement vulnerability management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement Microsoft Azure Resource management security
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Create Microsoft Azure resource locks, manage resource group security, configure Microsoft Azure policies, configure custom RBAC roles, configure subscription and resource permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Manage Security Operations (15-20%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure security services
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure Microsoft Azure Monitor, configure Microsoft Azure Log Analytics, configure diagnostic logging and log retention, configure vulnerability scanning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure security policies
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure centralized policy management by using Microsoft Azure Security Center, configure Just in Time VM access by using Microsoft Azure Security Center&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage security alerts
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Create and customize alerts, review and respond to alerts and recommendations, configure a playbook for a security event by using Microsoft Azure Security Center, investigate escalated security incidents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Secure Data and Applications (30-35%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure security policies to manage data
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure data classification, configure data retention, configure data sovereignty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure security for data infrastructure
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Enable database authentication, enable database auditing, configure Microsoft Azure SQL Database threat detection, configure access control for storage accounts, configure key management for storage accounts, create and manage Shared Access Signatures (SAS), configure security for HDInsights, configure security for Cosmos DB, configure security for Microsoft Azure Data Lake&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure encryption for data at rest
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Implement Microsoft Azure SQL Database Always Encrypted, implement database encryption, implement Storage Service Encryption, implement disk encryption, implement backup encryption&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement security for application delivery
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Implement security validations for application development, configure synthetic security transactions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure application security
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure SSL/TLS certs, configure Microsoft Azure services to protect web apps, create an application security baseline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure and manage Key Vault
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Manage access to Key Vault, manage permissions to secrets, certificates, and keys, manage certificates, manage secrets, configure key rotation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://mateoferreras.es/images/2019/02/AZ500.png&#34;&gt;
+&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft 365 Certified: Messaging Administrator Associate (beta)</title>
+      <link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-messaging-administrator-associate-beta/</link>
+      <pubDate>Mon, 28 Jan 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-messaging-administrator-associate-beta/</guid>
+      <description>
+        
+          &lt;p&gt;Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación Microsoft 365 Certified: Messaging Administrator Associate.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si eres un administrador de Exchange, esta es la certificación para ti.&lt;/p&gt;
+&lt;p&gt;La tecnología ha brindado a las empresas una amplia gama de opciones para comunicarse tanto dentro como fuera de las organizaciones, pero con el acceso ampliado se genera un riesgo; Las empresas necesitan administradores que sepan cómo mitigar esos riesgos.&lt;/p&gt;
+&lt;p&gt;Esta certificación validará que tiene las habilidades que necesita para diseñar y administrar soluciones de comunicaciones seguras y compatibles con el conjunto de herramientas líderes de la industria de Microsoft 365.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Desde las respectivas paginas de los exámenes ya se pueden programar los mismos.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-200.aspx&#34;&gt;MS-200: Planning and Configuring a Messaging Platform&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-201.aspx&#34;&gt;MS-201: Implementing a Hybrid and Secure Messaging Platform&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Si ya tienes aprobado el examen &lt;a href=&#34;https://www.microsoft.com/es-es/learning/exam-70-345.aspx&#34;&gt;70-345&lt;/a&gt; solo debes aprobar el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-202.aspx&#34;&gt;MS-202: Microsoft 365 Messaging Administrator Certification Transition Exam&lt;/a&gt; para obtener la certificación.&lt;/p&gt;
+&lt;p&gt;Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375196&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
+&lt;p&gt;Los enlaces de los cursos oficiales son los siguientes:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T01&#34;&gt;MS-200T01: Understanding the Modern Messaging Infrastructure&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T02&#34;&gt;MS-200T02: Managing Client Access and Mail Flow&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T03&#34;&gt;MS-200T03: Managing Messaging High Availability and Disaster Recovery&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-201T01&#34;&gt;MS-201T01: Defining a Hybrid Messaging Strategy&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-201T02&#34;&gt;MS-201T02: Managing Messaging Security, Hygiene, and Compliance&lt;/a&gt;&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft 365 Certified: Teamwork Administrator Associate (beta)</title>
+      <link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-teamwork-administrator-associate-beta/</link>
+      <pubDate>Mon, 14 Jan 2019 19:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-teamwork-administrator-associate-beta/</guid>
+      <description>
+        
+          &lt;p&gt;Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-teamwork-administrator.aspx&#34;&gt;Microsoft 365 Certified: Teamwork Administrator Associate&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Las herramientas de colaboración están en el centro del lugar de trabajo moderno.&lt;/p&gt;
+&lt;p&gt;Los equipos deben poder acceder y revisar sus datos más rápido que nunca, y necesitan soluciones integradas que sean seguras y escalables y que no obstaculicen a una fuerza laboral distribuida.&lt;/p&gt;
+&lt;p&gt;Esta certificación validará sus habilidades para diseñar soluciones elegantes, seguras y compatibles que resuelvan los rompecabezas de productividad más desafiantes de su empresa.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Desde las respectivas paginas de los exámenes ya se pueden programar los mismos.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-300.aspx&#34;&gt;MS-300: Deploying Microsoft 365 Teamwork&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-301.aspx&#34;&gt;MS-301: Deploying SharePoint Server Hybrid&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Si ya tienes aprobado el examen 70-339 solo debes aprobar el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-302.aspx&#34;&gt;MS-302: Microsoft 365 Teamwork Administrator Certification Transition Exam&lt;/a&gt; para obtener la certificación.&lt;/p&gt;
+&lt;p&gt;Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375195&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
+&lt;p&gt;Los enlaces de los cursos oficiales son los siguientes:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T01&#34;&gt;MS-300T01: Managing Office 365 Content Services&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T02&#34;&gt;MS-300T02: Managing SharePoint Online&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T03&#34;&gt;MS-300T03: Enabling Microsoft Teams for Collaboration&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T04&#34;&gt;MS-300T04: Enabling Office 365 Workloads for Collaboration&lt;/a&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T01&#34;&gt;MS-301T01: Implementing SharePoint 2019 Infrastructure&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T02&#34;&gt;MS-301T02: Implementing SharePoint 2019 Service Applications&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T03&#34;&gt;MS-301T03: Implementing SharePoint Hybrid Scenarios&lt;/a&gt;&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T04&#34;&gt;MS-301T04: Migrating to SharePoint Online&lt;/a&gt;&lt;/br&gt;&lt;/p&gt;
+
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft 365 Certified: Security Administrator Associate (beta)</title>
+      <link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-security-administrator-associate-beta/</link>
+      <pubDate>Mon, 07 Jan 2019 18:00:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-security-administrator-associate-beta/</guid>
+      <description>
+        
+          &lt;p&gt;Ya se ha publicado hoy la disponibilidad del examen en periodo beta de la nueva certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-security-administrator.aspx&#34;&gt;Microsoft 365 Certified: Security Administrator Associate&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;La supervisión de los administradores de seguridad calificados no solo es crucial para el éxito de las operaciones y las implementaciones de TI, Forbes informa que también es uno de los roles más demandados en tecnología y se espera que la brecha de talento siga creciendo.&lt;/p&gt;
+&lt;p&gt;Esta certificación le mostrará a su organización que posee las habilidades necesarias para proteger a su empresa contra amenazas de ciberseguridad cada vez más complejas y para cumplir con la regulación de datos cada vez más diversificada y en capas.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Desde la pagina del examen ya se puede programar el mismo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-500.aspx&#34;&gt;MS-500: Microsoft 365 Security Administrator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Podéis acceder al contenido del examen en su respectiva pagina de examen y es el que cito a continuación.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Implement and manage identity and access (30-25%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Secure Microsoft 365 hybrid environments.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure and manage security integration components in Microsoft 365 hybrid environments, including connectivity, synchronization services, and authentication, plan Azure AD authentication options, plan Azure AD synchronization options, monitor and interpret Azure AD Connect events.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Secure user accounts.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Implement Azure AD dynamic group membership, implement Azure AD Self-service password reset, manage Azure AD access reviews.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement authentication methods.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan sign-on security, implement multi-factor authentication (MFA), manage and monitor MFA, implement device sign-on methods, manage authentication methods, monitor authentication methods.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement conditional access.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for compliance and conditional access policies, configure and manage device compliance policy, configure and manage conditional access policy, monitor Conditional Access and Device Compliance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement role-based access control (RBAC).
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for RBAC, configure RBAC, monitor RBAC usage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement Azure AD Privileged Identity Management (PIM)
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for Azure PIM, configure and manage Azure PIM, monitor Azure PIM.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement Azure AD Identity Protection.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Implement user risk policy, implement sign-in risk policy, configure Identity Protection alerts, review and respond to risk events.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Implement and manage threat protection (20-25%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement an enterprise hybrid threat protection solution.&lt;/li&gt;
+&lt;li&gt;May include but is not limited to: Plan an Azure Advanced Threat Protection (ATP) solution, install and configure Azure ATP, manage Azure ATP workspace health, generate Azure ATP reports, integrate Azure ATP with Windows Defender ATP, monitor Azure ATP, manage suspicious activities.&lt;/li&gt;
+&lt;li&gt;Implement device threat protection.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan and implement a Windows Defender ATP solution, manage Windows Defender ATP, monitor Windows Defender ATP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement and manage device and application protection.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for device protection, configure and manage Windows Defender Application Guard, configure and manage Windows Defender Application Control, configure and manage Windows Defender Exploit Guard, configure Secure Boot, configure and manage Windows 10 device encryption, configure and manage non-Windows device encryption, plan for securing applications data on devices, define managed apps for Mobile Application Management (MAM), protect your enterprise data using Windows Information Protection (WIP), configure WIP policies, configure Intune App Protection policies for non-Windows devices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement and manage Office 365 messaging protection.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure Office 365 ATP anti-phishing protection, configure Office 365 ATP anti-phishing policies, define users and domains to protect with Office 365 ATP Anti-phishing, configure Office 365 ATP anti-spoofing, configure actions against impersonation, configure Office 365 ATP anti-spam protection, enable Office 365 ATP Safe-Attachments, configure Office 365 ATP Safe Attachments policies, configure Office 365 ATP Safe Attachments options, configure Office 365 ATP Safe Links options, configure Office 365 ATP Safe Links blocked URLs, configure Office 365 ATP Safe Links policies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement and manage Office 365 threat protection.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Configure Office 365 Threat Intelligence, integrate Office 365 Threat Intelligence with Office 365 services, integrate Office 365 Threat Intelligence with Windows Defender ATP, review threats and malware trends on the Office 365 ATP Threat Management dashboard, review threats and malware trends with Office 365 ATP Threat Explorer and Threat Tracker, create and review Office 365 ATP incidents, review quarantined items in ATP including Microsoft SharePoint Online, OneDrive for Business, Exchange Online, and Microsoft Teams, monitor online anti-malware solutions using Office 365 ATP reports, perform tests using Attack Simulator.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Implement and manage information protection (15-20%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Secure data access within Office 365.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan secure data access within Office 365, implement and manage Customer Lockbox, configure data access in Office 365 collaboration workloads, configure B2B sharing for external users.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage Azure information Protection (AIP).
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan an AIP solution, activate Azure Rights Management, configure usage rights, configure and manage super users, customize policy settings, create and configure labels and conditions, create and configure templates, configure languages, configure and use the AIP scanner, deploy the RMS connector, manage tenant keys, deploy the AIP client, track and revoke protected documents, integrate AIP with Microsoft Online Services.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage Data Loss Prevention (DLP).
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan a DLP solution, create and manage DLP policies, create and manage sensitive information types, monitor DLP reports, manage DLP notifications, create queries to locate sensitive data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implement and manage Microsoft Cloud App Security.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan Cloud App Security implementation, configure Office 365 Cloud App Security, perform productivity app discovery using Cloud App Security, manage entries in the Cloud app catalog, manage third-party apps in Office 365 Cloud App Security, manage Microsoft Cloud App Security, configure Cloud App Security connectors, configure Cloud App Security policies, configure and manage Cloud App Security templates, configure Cloud App Security users and permissions, review and respond to Cloud App Security alerts, review and interpret Cloud App Security dashboards and reports, review and interpret Cloud App Security activity log and governance log.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Manage governance and compliance features in Microsoft 365 (25-30%)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure and analyze security reporting.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Interpret Windows Analytics, configure Windows Telemetry options, configure Office Telemetry options, review and interpret security reports and dashboards, plan for custom security reporting with Intelligent Security Graph, review Office 365 secure score action and recommendations, configure reports and dashboards in Azure Log Analytics, review and interpret reports and dashboards in Azure Log Analytics, configure alert policies in the Office 365 Security and Compliance Center.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage and analyze audit logs and reports.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for auditing and reporting, configure Office 365 auditing and reporting, perform audit log search, review and interpret compliance reports and dashboards, configure audit alert policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure Office 365 classification and labeling.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for data governance classification and labels, search for personal data, apply labels to personal data, monitor for leaks of personal data, create and publish Office 365 labels, configure label policies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage data governance and retention.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for data governance and retention, review and interpret data governance reports and dashboards, configure retention policies, define data governance event types, define data governance supervision policies, configure Information holds, find and recover deleted Office 365 data, import data in the Security and Compliance Center, configure data archiving, manage inactive mailboxes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage search and investigation.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for content search and eDiscovery, delegate permissions to use search and discovery tools, use search and investigation tools to perform content searches, export content search results, manage eDiscovery cases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manage data privacy regulation compliance.
+&lt;ul&gt;
+&lt;li&gt;May include but is not limited to: Plan for regulatory compliance in Microsoft 365, review and interpret GDPR dashboards and reports, manage Data Subject Requests (DSRs), review Compliance Manager reports, create and perform Compliance Manager assessments and action items.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Han publicado 300 plazas para el examen, con el descuento de 80% que se facilita en Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375191&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta y no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
+&lt;p&gt;Los enlaces de los cursos oficiales son los siguientes:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T01&#34;&gt;MS-500T01-A: Managing Microsoft 365 Identity and Access&lt;/a&gt;.&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T02&#34;&gt;MS-500T02-A: Implementing Microsoft 365 Threat Protection&lt;/a&gt;.&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T03&#34;&gt;MS-500T03-A: Implementing Microsoft 365 Information Protection&lt;/a&gt;.&lt;/br&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T04&#34;&gt;MS-500T04-A: Administering Microsoft 365 Built-in Compliance&lt;/a&gt;.&lt;/br&gt;&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft 365 Certified: Modern Desktop Administrator Associate (beta)</title>
+      <link>https://mateoferreras.es/post/2018/12/microsoft-365-certified-modern-desktop-administrator-associate-beta/</link>
+      <pubDate>Mon, 03 Dec 2018 18:23:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2018/12/microsoft-365-certified-modern-desktop-administrator-associate-beta/</guid>
+      <description>
+        
+          &lt;p&gt;Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-enterprise-administrator.aspx&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Nuestra certificación de Modern Desktop Administrator Associate lo pondrá al día sobre los requisitos y la mecánica para implementar Windows 10, su primer paso para implementar las soluciones de Modern Desktop.&lt;/p&gt;
+&lt;p&gt;También aprenderá cómo simplificar sus implementaciones utilizando la actualización en el lugar, el piloto automático de Windows y las soluciones de identidad integradas para mejorar la experiencia del usuario y aumentar la productividad.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Podéis acceder al contenido de los exámenes en sus respectivas paginas de examen.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-100.aspx&#34;&gt;MD-100: Windows 10 (beta)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101: Managing Modern Desktops (beta)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si ya tienes aprobado el examen 70-698 solo necesitas aprobar el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101: Managing Modern Desktops&lt;/a&gt; para obtener la certificación.&lt;/p&gt;
+&lt;p&gt;Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375176&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Nuevas certificaciones en fundamentos de Azure y Microsoft 365</title>
+      <link>https://mateoferreras.es/post/2018/11/2018-11-30t122800&#43;0100/</link>
+      <pubDate>Fri, 30 Nov 2018 12:28:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2018/11/2018-11-30t122800&#43;0100/</guid>
+      <description>
+        
+          &lt;p&gt;Microsoft ha anunciado nuevas certificaciones de nivel fundamentos que enlazan con las nuevas rutas de certificación basados en roles, que pusieron en marcha a finales de Septiembre de este año.&lt;/p&gt;
+&lt;p&gt;No obstante las rutas que habían anunciado eran de nivel experto o asociado.&lt;/p&gt;
+&lt;p&gt;Lo nuevos exámenes para adquirir la certificación nivel fundamentos, son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-AZ-900.aspx&#34;&gt;AZ-900: Azure Fundamentals&lt;/a&gt;: Este examen está diseñado para candidatos que buscan demostrar un conocimiento básico de los servicios en la nube y cómo esos servicios se proporcionan con Microsoft Azure.
+El examen está dirigido a candidatos con antecedentes no técnicos, como aquellos involucrados en la venta o la compra de soluciones y servicios basados ​​en la nube o que tienen alguna participación en soluciones y servicios basados ​​en la nube, así como aquellos con un historial técnico que tienen la necesidad de validar su conocimiento a nivel fundacional en torno a los servicios en la nube.
+No se requiere experiencia técnica en TI, sin embargo, algún conocimiento o experiencia general en TI sería beneficioso.
+Este examen se puede tomar como un primer paso opcional para aprender sobre los servicios en la nube y cómo Microsoft Azure ejemplifica esos conceptos.
+Se puede tomar como un precursor de los exámenes de Microsoft Azure o de los servicios de nube de Microsoft.
+Si bien sería un primer paso beneficioso, validar el conocimiento del nivel básico, tomar este examen no es un requisito previo antes de tomar cualquier otra certificación basada en Azure. &lt;strong&gt;Disponible 31/12/2018&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-900.aspx&#34;&gt;MS-900: M365 Fundamentals&lt;/a&gt;: Este examen está diseñado para candidatos que buscan demostrar conocimientos básicos de las consideraciones y beneficios de la adopción de servicios en la nube en general y el software como un modelo de nube de servicio (SaaS).
+Este examen también cubrirá el conocimiento de las opciones disponibles y los beneficios obtenidos al implementar las ofertas de servicios en la nube de Microsoft 365.
+Este examen puede tomarse como un precursor de los exámenes de tecnología y computación en la nube, como Office 365, Microsoft Intune, Azure Information Protection (AIP) y Windows 10. &lt;strong&gt;Disponible 29/12/2018&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ambos exámenes no son requeridos en ninguna de las rutas para los niveles asociado o experto, pero son el punto de encuentro con los conceptos básicos de dichas rutas.&lt;/p&gt;
+&lt;p&gt;Fuente: &lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375177&#34;&gt;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375177&lt;/a&gt;&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Futuras certificaciones Microsoft</title>
+      <link>https://mateoferreras.es/post/2018/11/futuras-certificaciones-microsoft/</link>
+      <pubDate>Mon, 19 Nov 2018 19:16:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2018/11/futuras-certificaciones-microsoft/</guid>
+      <description>
+        
+          &lt;p&gt;Tras una búsqueda esta tarde para intentar ampliar la información sobre la certificación de Windows 10 he localizado en proveedores de formación Microsoft, como www.certificationcamps.com, itcareercamps.com o www.lrseducationservices.com; información&lt;/p&gt;
+&lt;p&gt;relativa a otras certificaciones de productos Microsoft que se van a publicar entre finales de año o comienzos del año que viene.&lt;/p&gt;
+&lt;p&gt;Entre las paginas de los diferente proveedores en una de ellas incorporan la siguiente imagen de hoja de ruta, que complementa las hojas de rutas anteriores que publico Microsoft.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mateoferreras.es/images/2018/11/m365_overview.png&#34; alt=&#34;Roadmap&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Como indican en las diferentes paginas estas informaciones pueden sufrir modificaciones ya que no son las versiones finales.&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-365-certified-modern-desktop-administrator-associate-windows-10&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate (Windows 10)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MD-100: Windows 10&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 03 de diciembre de 2018&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MD-100T01: Installing Windows 10&lt;/li&gt;
+&lt;li&gt;MD-100T02: Configuring Windows 10&lt;/li&gt;
+&lt;li&gt;MD-100T03: Protecting Windows 10&lt;/li&gt;
+&lt;li&gt;MD-100T04: Maintaining Windows 10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MD-101: Managing Modern Desktops&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 03 de diciembre de 2018&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MD-101T01: Deploying the Modern Desktop&lt;/li&gt;
+&lt;li&gt;MD-101T02: Protecting Modern Desktops and Devices&lt;/li&gt;
+&lt;li&gt;MD-101T03: Managing Modern Desktops and Devices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si ya tienes aprobado el examen 70-698 solo necesitas aprobar el examen MD-101: Managing Modern Desktops para obtener la certificación.&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-365-certified-messaging-administrator-associate&#34;&gt;Microsoft 365 Certified: Messaging Administrator Associate&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-200: Planning and Configuring a Messaging Platform&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 28 de enero de 2019&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS-200T01: Understanding the Modern Messaging Infrastructure&lt;/li&gt;
+&lt;li&gt;MS-200T02: Managing Client Access and Mail Flow&lt;/li&gt;
+&lt;li&gt;MS-200T03: Managing Messaging High Availability and Disaster Recovery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-201: Implementing a Hybrid and Secure Messaging Platform&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 28 de enero de 2019&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS-201T01: Defining a Hybrid Messaging Strategy&lt;/li&gt;
+&lt;li&gt;MS-201T02: Managing Messaging Security, Hygiene, and Compliance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si ya tienes aprobado el examen 70-345 solo debes aprobar el examen MS-202: Microsoft 365 Messaging Administrator Certification Transition Exam para obtener la certificación.&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-365-certified-teamwork-administrator-associate-sharepoint-2019&#34;&gt;Microsoft 365 Certified: Teamwork Administrator Associate (SharePoint 2019)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-300: Deploying Microsoft 365 Teamwork&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 14 de enero de 2019&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS-300T01: Managing Office 365 Content Services&lt;/li&gt;
+&lt;li&gt;MS-300T02: Managing SharePoint Online&lt;/li&gt;
+&lt;li&gt;MS-300T03: Enabling Microsoft Teams for Collaboration&lt;/li&gt;
+&lt;li&gt;MS-300T04: Enabling Office 365 Workloads for Collaboration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-301: Deploying SharePoint Server Hybrid&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 14 de enero de 2019&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS-301T01: Implementing SharePoint 2019 Infrastructure&lt;/li&gt;
+&lt;li&gt;MS-301T02: Implementing SharePoint 2019 Service Applications&lt;/li&gt;
+&lt;li&gt;MS-301T03: Implementing SharePoint Hybrid Scenarios&lt;/li&gt;
+&lt;li&gt;MS-301T04: Migrating to SharePoint Online&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si ya tienes aprobado el examen 70-339 solo debes aprobar el examen MS-302: Microsoft 365 Teamwork Administrator Certification Transition Exam para obtener la certificación.&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-365-certified-security-administrator-associate&#34;&gt;Microsoft 365 Certified: Security Administrator Associate&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-500: Microsoft 365 Security Administrator&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 07 de enero de 2019&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MS-500T01: Managing Microsoft 365 Identity and Access&lt;/li&gt;
+&lt;li&gt;MS-500T02: Implementing Microsoft 365 Threat Protection&lt;/li&gt;
+&lt;li&gt;MS-500T03: Implementing Microsoft 365 Information Protection&lt;/li&gt;
+&lt;li&gt;MS-500T04: Administering Microsoft 365 Built-in Compliance&lt;/li&gt;
+&lt;/ul&gt;
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Microsoft 365 Certified: Modern Desktop Administrator Associate</title>
+      <link>https://mateoferreras.es/post/2018/11/mca-moderm-desktop/</link>
+      <pubDate>Mon, 12 Nov 2018 22:04:00 +0100</pubDate>
+      
+      <guid>https://mateoferreras.es/post/2018/11/mca-moderm-desktop/</guid>
+      <description>
+        
+          &lt;p&gt;Con la primera entrada del blog quiero anticipar la siguiente ruta de certificación que Microsoft publicara dentro de los nuevos Certificados basados en roles, esta nueva certificación esta denominada como:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/modern-desktop.aspx&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esta ruta es nivel Associate y consta de dos exámenes para completarla, los cuales ya aparecen visibles en la pagina de &lt;a href=&#34;http://www.pearsonvue.com/microsoft/exams/&#34;&gt;Pearson Vue&lt;/a&gt; y tienen como fecha de programación inicial el próximo día 3 de Diciembre de 2018. Son los siguientes:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-100.aspx&#34;&gt;MD-100: Windows 10 (beta)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101: Managing Modern Desktops (beta)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;De momento no he localizado mas información al respecto de dichos exámenes en cuanto a su contenido y los recursos disponibles de formación. Entiendo que los irán publicando en las próximas semanas.&lt;/p&gt;
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
