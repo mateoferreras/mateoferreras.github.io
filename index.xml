@@ -1,742 +1,575 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>mateoferreras.es</title>
-    <link>https://mateoferreras.es/</link>
-    <description>Recent content on mateoferreras.es</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 15 Aug 2019 18:00:00 +0100</lastBuildDate><atom:link href="https://mateoferreras.es/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Restablecer la contraseña DSRM</title>
-      <link>https://mateoferreras.es/post/2019/08/resetear-contrasena-dsrm/</link>
-      <pubDate>Thu, 15 Aug 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/08/resetear-contrasena-dsrm/</guid>
-      <description>
-        
-          &lt;p&gt;La contraseña del Modo de restauración de servicios de directorio (DSRM) es necesaria para iniciar sesión en un controlador de dominio cuando no se ejecutan los Servicios de dominio de Active Directory (AD DS), bien porque se han detenido o porque el controlador de dominio se ha iniciado en Directory Services Restore Mode (DSRM).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Nota&lt;/strong&gt;&lt;/br&gt;
-La contraseña de DSRM no es la contraseña de la cuenta del administrador del dominio.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Puede que en su momento no se realizase la documentación apropiada y que con el paso del tiempo se perdiese la contraseña, quizás nos vemos en la necesidad de restablecer la contraseña del Modo de restauración de servicios de directorio (DSRM) por un riesgo de seguridad. Para lo cual seria aplicar el proceso que siguiente.&lt;/p&gt;
-&lt;h2 id=&#34;restablecer-la-contraseña-de-administrador-de-dsrm&#34;&gt;Restablecer la contraseña de administrador de DSRM&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Ejecutamos un símbolo del sistema como administrador.&lt;/li&gt;
-&lt;li&gt;Escribimos &lt;code&gt;ntdsutil&lt;/code&gt; y, a continuación, pulsamos &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;En el símbolo del sistema de &lt;strong&gt;NTDSUTIL&lt;/strong&gt;, escribimos &lt;code&gt;set dsrm password&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;En el símbolo del sistema de &lt;strong&gt;DSRM&lt;/strong&gt;, escribimos una de las siguientes líneas en función de nuestro objetivo:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Para restablecer la contraseña en el servidor en el que estamos trabajando, escribimos &lt;code&gt;reset password on server null&lt;/code&gt;. &lt;em&gt;La variable &lt;strong&gt;NULL&lt;/strong&gt; indica que la contraseña de DSRM se está restableciendo en el servidor local&lt;/em&gt;. Escribimos la nueva contraseña cuando nos la solicita.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Para restablecer la contraseña en un servidor remoto, escribimos &lt;code&gt;reset password on server servername&lt;/code&gt;, &lt;em&gt;donde la variable &lt;strong&gt;SERVERNAME&lt;/strong&gt; es el nombre DNS del servidor en el que queremos restablecer la contraseña de DSRM&lt;/em&gt;. Escribimos la nueva contraseña cuando nos la solicita.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;En el símbolo del sistema &lt;strong&gt;DSRM&lt;/strong&gt;, escribimos &lt;code&gt;q&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;En el símbolo del sistema de &lt;strong&gt;NTDSUTIL&lt;/strong&gt;, escribimos &lt;code&gt;q&lt;/code&gt; para salir.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/08/cmd-ntdsutil.gif&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Accedemos al servidor en modo restauración:&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/08/restore-mode.gif&#34;&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;enlaces&#34;&gt;Enlaces:&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://technet.microsoft.com/es-es/library/cc754363(v=ws.10).aspx&#34;&gt;set DSRM password&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://blogs.technet.microsoft.com/meamcs/2012/05/29/reset-the-dsrm-administrator-password/&#34;&gt;Reset the DSRM Administrator Password&lt;/a&gt;&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Deshabilitar IPv6 en Windows</title>
-      <link>https://mateoferreras.es/post/2019/04/deshabilitar-ipv6-windows/</link>
-      <pubDate>Sun, 07 Apr 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/04/deshabilitar-ipv6-windows/</guid>
-      <description>
-        
-          &lt;p&gt;Desde el lanzamiento de Windows Server 2008 y Windows Vista viene integrado en los adaptadores de red Microsoft el protocolo IPv6.&lt;/p&gt;
-&lt;p&gt;Por diferentes motivos puede ser necesario deshabilitar el citado protocolo en alguno o la totalidad de los sistemas de nuestro entorno.&lt;/p&gt;
-&lt;p&gt;Para deshabilitar el protocolo de manera correcta, Microsoft nos facilita la siguiente &lt;a href=&#34;https://support.microsoft.com/es-es/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users&#34;&gt;Guía para configurar IPv6 en Windows para usuarios avanzados&lt;/a&gt;. Ya que si desmarcamos unicamente la opción de Protocolo de Internet versión 6 (TCP /IPv6), en las propiedades del adaptador de red, no se deshabilita completamente el uso del protocolo.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/adaptador.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Parámetros:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    Location: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\
-    Name: DisabledComponents
-    Type: REG_DWORD
-    Min Value: 0x00
-    Max Value: 0xFF (IPv6 disabled)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;pasos-para-deshabilitar-ipv6&#34;&gt;Pasos para deshabilitar IPv6.&lt;/h2&gt;
-&lt;p&gt;1.- El primer paso es la modificación del registro del sistema, que se puede realizar de las siguientes maneras:&lt;/p&gt;
-&lt;p&gt;a.- Desde la consola del editor del registro (ejecutando como administrador):&lt;/br&gt;
-Abrimos el editor de Registro.&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/regedit.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Navegamos a la ruta:&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/regedit_ruta.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Añadimos Elemento:&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/regedit_dword.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;b.- Desde CMD (ejecutando como administrador):&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    reg add &amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters&amp;quot; /v DisabledComponents /t REG_DWORD /d 0xFF /f
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;c.- Desde PowerShell (ejecutando como administrador):&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    New-ItemProperty &amp;quot;HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\&amp;quot; -Name DisabledComponents -Value 0xFF -PropertyType DWord
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;2.- Una vez aplicada la modificación a través del registro, ya podemos proceder a desmarcar la opción en las propiedades del adaptador.&lt;/br&gt;
-Para completar todo el proceso es necesario realizar un reinicio del sistema.&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/adaptaddor_disabled.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;En el enlace facilitado anteriormente se amplia la información. También están disponibles diferentes scripts que realizan la configuración del protocolo de manera mas personalizada según sean nuestras necesidades.&lt;/p&gt;
-&lt;h2 id=&#34;aplicarlo-mediante-políticas-de-grupo&#34;&gt;Aplicarlo mediante políticas de grupo:&lt;/h2&gt;
-&lt;p&gt;Con una GPP, podemos desplegar claves en el registro.
-Abrir el editor de Directivas de Grupo, en Herramientas administrativas o bien creando una nueva consola de administración con MMC.&lt;/p&gt;
-&lt;p&gt;Desplegar el bosque, el dominio, etc… hasta &lt;strong&gt;“Objetos de directiva de grupo“&lt;/strong&gt;. Botón derecho con el ratón, del menú seleccionar &lt;strong&gt;Nuevo&lt;/strong&gt;.&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_create.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Introducir un nombre descriptivo, por ejemplo: &lt;strong&gt;Disable_IPv6&lt;/strong&gt;. Hacer clic en el botón &lt;strong&gt;Aceptar&lt;/strong&gt;.&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_create_name.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Seleccionar la nueva directiva que se acaba de crear, botón derecho, seleccionar &lt;strong&gt;Editar…&lt;/strong&gt;.&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_edit.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Como la rama está dentro de &lt;code&gt;HKEY_LOCAL_MACHINE&lt;/code&gt;, corresponderá a una GPP de equipo:&lt;/br&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    Configuración de equipo &amp;gt; Preferencias &amp;gt; Configuración de Windows &amp;gt; Registro
-    Nuevo &amp;gt; Elemento del registro
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_edit_regedit.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Configuración de registro.&lt;/br&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/04/gpo_edit_regedit_create.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Finalmente, para aplicar los cambios al sistema operativo arrancado, &lt;strong&gt;se deben reiniciar los equipos&lt;/strong&gt;.&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Microsoft 365 Certified: Modern Desktop Administrator Associate</title>
-      <link>https://mateoferreras.es/post/2019/03/microsoft-365-certified-modern-desktop-administrator-associate/</link>
-      <pubDate>Fri, 22 Mar 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/03/microsoft-365-certified-modern-desktop-administrator-associate/</guid>
-      <description>
-        
-          &lt;p&gt;La primera quincena del año me presente a los exámenes de la certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/modern-desktop.aspx&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Estos exámenes los realice en el periodo beta, por lo que hasta esta pasada semana no publicaron los resultados de los mismos.&lt;/p&gt;
-&lt;p&gt;El resultado de ambos exámenes &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-100.aspx&#34;&gt;MD-100&lt;/a&gt; y &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101&lt;/a&gt; ha sido aprobado, consiguiendo la certificación asociada.&lt;/p&gt;
-&lt;p&gt;Certificado Modern Desktop Administrator:&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/mca_md.png&#34; alt=&#34;Certificado obtenido&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Aunque el ecosistema de puestos de trabajo no es uno de los áreas que mas trato a nivel laboral.&lt;/p&gt;
-&lt;p&gt;Creo que con las nuevas certificaciones se premia mas un conocimiento global que de una tecnología especifica.&lt;/p&gt;
-&lt;p&gt;Buen comienzo del año y espero que sea la primera certificación de las habilidades que me planteo adquirir este año.&lt;/p&gt;
-
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Actualizaciones de Windows Server 2016 y proxy</title>
-      <link>https://mateoferreras.es/post/2019/03/actualizaciones-de-windows-server-2016-y-proxy/</link>
-      <pubDate>Thu, 21 Mar 2019 19:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/03/actualizaciones-de-windows-server-2016-y-proxy/</guid>
-      <description>
-        
-          &lt;p&gt;Cuando preparaba una nueva plantilla de servidor con Windows Server 2016, he tenido problemas con las actualizaciones de Windows.&lt;/p&gt;
-&lt;p&gt;Siempre recurro a actualizar a través de Windows Update para asegurarme que no me dejo parches pendientes.&lt;/p&gt;
-&lt;p&gt;En esta ocasión al realizar la comprobación se mostraban diferentes parches disponibles y comenzaba el proceso de descarga.&lt;/p&gt;
-&lt;p&gt;Como este proceso es largo, en este punto me desentiendo del proceso y lo reviso posteriormente, tras unas horas vuelvo a comprobar el Servidor y este se encuentra al 0% de descarga.&lt;/p&gt;
-&lt;p&gt;En este punto verifico que no me hubiese dejado el proxy sin configurar en el navegador.&lt;/p&gt;
-&lt;p&gt;Compruebo que el servidor tiene acceso a Internet.&lt;/p&gt;
-&lt;p&gt;Reinicio el servicio de Windows Update y vuelvo a lanzar la comprobación con el mismo resultado.&lt;/p&gt;
-&lt;p&gt;Tras una búsqueda en Internet localizo el siguiente enlace de Microsoft a parte de otros blogs donde se detalla el mismo error: &lt;a href=&#34;https://docs.microsoft.com/es-es/windows/deployment/update/windows-update-troubleshooting#problemas-relacionados-con-el-proxy-http&#34;&gt;Problemas relacionados con el Proxy HTTP&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Parece que con Windows Server 2016 y Windows 10, las actualizaciones no utilizan el proxy a nivel nivel de usuario y lo requieren a nivel de sistema.&lt;/p&gt;
-&lt;p&gt;Para lo cual basta con ejecutar uno de los siguientes comando en un símbolo del sistema con privilegios de Administrador.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    netsh winhttp import proxy source=ie
-    netsh winhttp set proxy &amp;lt;Proxy&amp;gt;:&amp;lt;Puerto&amp;gt;
-    set proxy &amp;lt;Proxy&amp;gt;:&amp;lt;Puerto&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Con el siguiente comando verificamos el estado:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    netsh winhttp show proxy
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Tras la configuración del proxy del sistema reinicio nuevamente el servicio de Windows Update y relanzo la comprobación de parches.&lt;/p&gt;
-&lt;p&gt;En esta ocasión aparecen los parches y veo que progresa la descarga de los mismos.&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Agregar Features on Demand desde imagen ISO</title>
-      <link>https://mateoferreras.es/post/2019/03/features-on-demand-iso/</link>
-      <pubDate>Thu, 21 Mar 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/03/features-on-demand-iso/</guid>
-      <description>
-        
-          &lt;p&gt;Puede que en el entorno empresarial no funcione correctamente la instalación de las características opcionales (Features on Demand) de Windows.&lt;/p&gt;
-&lt;p&gt;Ya sea por las restricciones que se aplican a las redes o en función del diseño de la infraestructura.&lt;/p&gt;
-&lt;p&gt;En mi caso me he encontrado que al intentar agregar, en un equipo con Windows 10 versión 1809, la característica opcional Visor de XPS me daba un error.&lt;/p&gt;
-&lt;p&gt;Tras un intento de instalación que demora unos segundos, devuelve un mensaje de error de instalación, remitiéndote a contactar con el administrador.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/error.png&#34;&gt;
-&lt;/p&gt;
-Si intento realizar la instalación a través de PowerShell o DISM, también devuelve un error.  
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/error_dism.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;El problema en mi caso es debido a que el equipo Windows 10 se encuentra en una infraestructura System Center Configuration Manager. En la cual no esta habilitada la disponibilidad de las Características opcionales, por lo que el equipo intenta siempre ir al SCCM y no a Windows Update donde si están disponibles los binarios.&lt;/p&gt;
-&lt;p&gt;He conseguido realizar la instalación independiente desde una de las imágenes ISO.&lt;/p&gt;
-&lt;p&gt;Estas imagenes las tenemos disponibles si disponemos de una suscripción de MSDN o en el Volume Licensing Service Center.&lt;/p&gt;
-&lt;p&gt;Accedemos a nuestro Microsoft Volume Licensing Service Center y procedemos a descargar las imágenes ISO de los Features on Demand que correspondan a nuestra edición.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/vlcs_fod.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Elegimos las versión, de 32 bit o 64 bit según nos corresponda:&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/fod_1.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Descargables de 32 Bits.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/fod_32.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Descargables de 64 Bits.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/fod_64.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;La funcionalidad que queremos agregar se encuentra en el Disk 1.&lt;/p&gt;
-&lt;p&gt;Descargamos la imagen y montamos como unidad en el equipo, también podemos descomprimirlo en una carpeta local o de red.&lt;/p&gt;
-&lt;p&gt;Abrimos una ventana de Powershell con privilegios administrativos.&lt;/p&gt;
-&lt;p&gt;Ejecutamos el siguiente comando &lt;code&gt;DISM.EXE /Online /Add-package /PackagePath:&amp;lt;ruta del paquete&amp;gt;&lt;/code&gt; para agregar la característica.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/dism_inst.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Cuando acaba el proceso, podemos verificar que ya disponemos de la Característica.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/visor.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Y en este caso también como aplicación en el sistema.&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/03/xps_app-1.png&#34;&gt;
-&lt;/p&gt;
-&lt;p&gt;Es aplicable a las características FoD como las Herramientas RSAT a partir de la versión de Windows 10 1809.&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Nueva certificación Azure</title>
-      <link>https://mateoferreras.es/post/2019/02/certificacion-azure/</link>
-      <pubDate>Thu, 21 Feb 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/02/certificacion-azure/</guid>
-      <description>
-        
-          &lt;p&gt;Navegando por la pagina de Pearson Vue he localizado un nuevo examen de certificación que tiene la nomenclatura:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wsr.pearsonvue.com/testtaker/registration/SelectExamPage.htm?actionMethod=testtaker%2Fregistration%2FSelectExamPage.xhtml%3AselectExamPageBean.selectExamSeriesAction%28%29&amp;amp;examSeriesId=39495&amp;amp;conversationId=616879&#34;&gt;AZ-500: Microsoft Azure Security Technologies&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;color:red&#34;&gt;ACTUALIZACIÓN 06/03/2019&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Todo apunta a una nueva certificación basada en roles centrada en la securización de Azure y sus servicios asociados.&lt;/p&gt;
-&lt;p&gt;Todavía desconozco si este examen completa una ruta como así hace el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-500.aspx&#34;&gt;MS-500: Microsoft 365 Security Administration&lt;/a&gt; en el entorno de Microsoft 365, que permite conseguir la certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-security-administrator.aspx&#34;&gt;Microsoft 365 Certified Security Administrator Associate&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;El examen ya aparece visible en la pagina de Pearson Vue y tienen como fecha de programación inicial el próximo día 27 de Febrero de 2019.&lt;/p&gt;
-&lt;p&gt;De momento no he localizado mas información al respecto del contenido del examen o de los recursos disponibles de formación. Entiendo que los irán publicando en las próximas semanas.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span style=&#34;color:red&#34;&gt;ACTUALIZACIÓN 06/03/2019&lt;/span&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;El examen ya no se encuentra disponible de la pagina de &lt;a href=&#34;http://www.pearsonvue.com/microsoft/exams/&#34;&gt;Pearson VUE&lt;/a&gt;, pero hoy esta activa la pagina de examen en el sitio de Microsoft.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-az-500.aspx&#34;&gt;EXAM AZ-500: Microsoft Azure Security Technologies (beta)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Estas son las habilidades medidas.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Manage Identity and Access (20-25%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Configure Microsoft Azure Active Directory for workloads
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Create App Registration, configure App Registration permission scopes, manage App Registration permission consent, configure Multi-Factor Authentication settings, manage Microsoft Azure AD directory groups, manage Microsoft Azure AD users, install and configure Microsoft Azure AD Connect, configure authentication methods, implement Conditional Access policies, configure Microsoft Azure AD identity protection&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure Microsoft Azure AD Privileged Identity Management
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Monitor privileged access, configure Access Reviews, activate Privileged Identity Management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure Microsoft Azure tenant security
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Transfer Microsoft Azure subscriptions between Microsoft Azure AD tenants, manage API access to Microsoft Azure subscriptions and resources&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Implement Platform Protection (35-40%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implement network security
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure virtual network connectivity, configure Network Security Groups (NSGs), create and configure Microsoft Azure Firewall, create and configure application security groups, configure remote access management, configure baseline, configure resource firewall&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement host security
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure endpoint security within the VM, configure VM security, harden VMs in Microsoft Azure, configure system updates for VMs in Microsoft Azure, configure baseline&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure container security
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure network, configure authentication, configure container isolation, configure AKS security, configure container registry, configure container instance security, implement vulnerability management&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement Microsoft Azure Resource management security
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Create Microsoft Azure resource locks, manage resource group security, configure Microsoft Azure policies, configure custom RBAC roles, configure subscription and resource permissions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Manage Security Operations (15-20%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Configure security services
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure Microsoft Azure Monitor, configure Microsoft Azure Log Analytics, configure diagnostic logging and log retention, configure vulnerability scanning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure security policies
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure centralized policy management by using Microsoft Azure Security Center, configure Just in Time VM access by using Microsoft Azure Security Center&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage security alerts
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Create and customize alerts, review and respond to alerts and recommendations, configure a playbook for a security event by using Microsoft Azure Security Center, investigate escalated security incidents&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Secure Data and Applications (30-35%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Configure security policies to manage data
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure data classification, configure data retention, configure data sovereignty&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure security for data infrastructure
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Enable database authentication, enable database auditing, configure Microsoft Azure SQL Database threat detection, configure access control for storage accounts, configure key management for storage accounts, create and manage Shared Access Signatures (SAS), configure security for HDInsights, configure security for Cosmos DB, configure security for Microsoft Azure Data Lake&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure encryption for data at rest
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Implement Microsoft Azure SQL Database Always Encrypted, implement database encryption, implement Storage Service Encryption, implement disk encryption, implement backup encryption&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement security for application delivery
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Implement security validations for application development, configure synthetic security transactions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure application security
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure SSL/TLS certs, configure Microsoft Azure services to protect web apps, create an application security baseline&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure and manage Key Vault
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Manage access to Key Vault, manage permissions to secrets, certificates, and keys, manage certificates, manage secrets, configure key rotation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://mateoferreras.es/images/2019/02/AZ500.png&#34;&gt;
-&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Microsoft 365 Certified: Messaging Administrator Associate (beta)</title>
-      <link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-messaging-administrator-associate-beta/</link>
-      <pubDate>Mon, 28 Jan 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-messaging-administrator-associate-beta/</guid>
-      <description>
-        
-          &lt;p&gt;Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación Microsoft 365 Certified: Messaging Administrator Associate.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Si eres un administrador de Exchange, esta es la certificación para ti.&lt;/p&gt;
-&lt;p&gt;La tecnología ha brindado a las empresas una amplia gama de opciones para comunicarse tanto dentro como fuera de las organizaciones, pero con el acceso ampliado se genera un riesgo; Las empresas necesitan administradores que sepan cómo mitigar esos riesgos.&lt;/p&gt;
-&lt;p&gt;Esta certificación validará que tiene las habilidades que necesita para diseñar y administrar soluciones de comunicaciones seguras y compatibles con el conjunto de herramientas líderes de la industria de Microsoft 365.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Desde las respectivas paginas de los exámenes ya se pueden programar los mismos.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-200.aspx&#34;&gt;MS-200: Planning and Configuring a Messaging Platform&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-201.aspx&#34;&gt;MS-201: Implementing a Hybrid and Secure Messaging Platform&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Si ya tienes aprobado el examen &lt;a href=&#34;https://www.microsoft.com/es-es/learning/exam-70-345.aspx&#34;&gt;70-345&lt;/a&gt; solo debes aprobar el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-ms-202.aspx&#34;&gt;MS-202: Microsoft 365 Messaging Administrator Certification Transition Exam&lt;/a&gt; para obtener la certificación.&lt;/p&gt;
-&lt;p&gt;Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375196&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
-&lt;p&gt;Los enlaces de los cursos oficiales son los siguientes:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T01&#34;&gt;MS-200T01: Understanding the Modern Messaging Infrastructure&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T02&#34;&gt;MS-200T02: Managing Client Access and Mail Flow&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T03&#34;&gt;MS-200T03: Managing Messaging High Availability and Disaster Recovery&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-201T01&#34;&gt;MS-201T01: Defining a Hybrid Messaging Strategy&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-201T02&#34;&gt;MS-201T02: Managing Messaging Security, Hygiene, and Compliance&lt;/a&gt;&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Microsoft 365 Certified: Teamwork Administrator Associate (beta)</title>
-      <link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-teamwork-administrator-associate-beta/</link>
-      <pubDate>Mon, 14 Jan 2019 19:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-teamwork-administrator-associate-beta/</guid>
-      <description>
-        
-          &lt;p&gt;Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-teamwork-administrator.aspx&#34;&gt;Microsoft 365 Certified: Teamwork Administrator Associate&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Las herramientas de colaboración están en el centro del lugar de trabajo moderno.&lt;/p&gt;
-&lt;p&gt;Los equipos deben poder acceder y revisar sus datos más rápido que nunca, y necesitan soluciones integradas que sean seguras y escalables y que no obstaculicen a una fuerza laboral distribuida.&lt;/p&gt;
-&lt;p&gt;Esta certificación validará sus habilidades para diseñar soluciones elegantes, seguras y compatibles que resuelvan los rompecabezas de productividad más desafiantes de su empresa.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Desde las respectivas paginas de los exámenes ya se pueden programar los mismos.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-300.aspx&#34;&gt;MS-300: Deploying Microsoft 365 Teamwork&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-301.aspx&#34;&gt;MS-301: Deploying SharePoint Server Hybrid&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Si ya tienes aprobado el examen 70-339 solo debes aprobar el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-302.aspx&#34;&gt;MS-302: Microsoft 365 Teamwork Administrator Certification Transition Exam&lt;/a&gt; para obtener la certificación.&lt;/p&gt;
-&lt;p&gt;Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375195&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
-&lt;p&gt;Los enlaces de los cursos oficiales son los siguientes:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T01&#34;&gt;MS-300T01: Managing Office 365 Content Services&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T02&#34;&gt;MS-300T02: Managing SharePoint Online&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T03&#34;&gt;MS-300T03: Enabling Microsoft Teams for Collaboration&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T04&#34;&gt;MS-300T04: Enabling Office 365 Workloads for Collaboration&lt;/a&gt;&lt;/br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T01&#34;&gt;MS-301T01: Implementing SharePoint 2019 Infrastructure&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T02&#34;&gt;MS-301T02: Implementing SharePoint 2019 Service Applications&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T03&#34;&gt;MS-301T03: Implementing SharePoint Hybrid Scenarios&lt;/a&gt;&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T04&#34;&gt;MS-301T04: Migrating to SharePoint Online&lt;/a&gt;&lt;/br&gt;&lt;/p&gt;
-
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Microsoft 365 Certified: Security Administrator Associate (beta)</title>
-      <link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-security-administrator-associate-beta/</link>
-      <pubDate>Mon, 07 Jan 2019 18:00:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-security-administrator-associate-beta/</guid>
-      <description>
-        
-          &lt;p&gt;Ya se ha publicado hoy la disponibilidad del examen en periodo beta de la nueva certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-security-administrator.aspx&#34;&gt;Microsoft 365 Certified: Security Administrator Associate&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;La supervisión de los administradores de seguridad calificados no solo es crucial para el éxito de las operaciones y las implementaciones de TI, Forbes informa que también es uno de los roles más demandados en tecnología y se espera que la brecha de talento siga creciendo.&lt;/p&gt;
-&lt;p&gt;Esta certificación le mostrará a su organización que posee las habilidades necesarias para proteger a su empresa contra amenazas de ciberseguridad cada vez más complejas y para cumplir con la regulación de datos cada vez más diversificada y en capas.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Desde la pagina del examen ya se puede programar el mismo.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-500.aspx&#34;&gt;MS-500: Microsoft 365 Security Administrator&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Podéis acceder al contenido del examen en su respectiva pagina de examen y es el que cito a continuación.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Implement and manage identity and access (30-25%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Secure Microsoft 365 hybrid environments.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure and manage security integration components in Microsoft 365 hybrid environments, including connectivity, synchronization services, and authentication, plan Azure AD authentication options, plan Azure AD synchronization options, monitor and interpret Azure AD Connect events.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Secure user accounts.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Implement Azure AD dynamic group membership, implement Azure AD Self-service password reset, manage Azure AD access reviews.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement authentication methods.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan sign-on security, implement multi-factor authentication (MFA), manage and monitor MFA, implement device sign-on methods, manage authentication methods, monitor authentication methods.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement conditional access.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for compliance and conditional access policies, configure and manage device compliance policy, configure and manage conditional access policy, monitor Conditional Access and Device Compliance.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement role-based access control (RBAC).
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for RBAC, configure RBAC, monitor RBAC usage.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement Azure AD Privileged Identity Management (PIM)
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for Azure PIM, configure and manage Azure PIM, monitor Azure PIM.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement Azure AD Identity Protection.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Implement user risk policy, implement sign-in risk policy, configure Identity Protection alerts, review and respond to risk events.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Implement and manage threat protection (20-25%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implement an enterprise hybrid threat protection solution.&lt;/li&gt;
-&lt;li&gt;May include but is not limited to: Plan an Azure Advanced Threat Protection (ATP) solution, install and configure Azure ATP, manage Azure ATP workspace health, generate Azure ATP reports, integrate Azure ATP with Windows Defender ATP, monitor Azure ATP, manage suspicious activities.&lt;/li&gt;
-&lt;li&gt;Implement device threat protection.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan and implement a Windows Defender ATP solution, manage Windows Defender ATP, monitor Windows Defender ATP.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement and manage device and application protection.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for device protection, configure and manage Windows Defender Application Guard, configure and manage Windows Defender Application Control, configure and manage Windows Defender Exploit Guard, configure Secure Boot, configure and manage Windows 10 device encryption, configure and manage non-Windows device encryption, plan for securing applications data on devices, define managed apps for Mobile Application Management (MAM), protect your enterprise data using Windows Information Protection (WIP), configure WIP policies, configure Intune App Protection policies for non-Windows devices.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement and manage Office 365 messaging protection.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure Office 365 ATP anti-phishing protection, configure Office 365 ATP anti-phishing policies, define users and domains to protect with Office 365 ATP Anti-phishing, configure Office 365 ATP anti-spoofing, configure actions against impersonation, configure Office 365 ATP anti-spam protection, enable Office 365 ATP Safe-Attachments, configure Office 365 ATP Safe Attachments policies, configure Office 365 ATP Safe Attachments options, configure Office 365 ATP Safe Links options, configure Office 365 ATP Safe Links blocked URLs, configure Office 365 ATP Safe Links policies.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement and manage Office 365 threat protection.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Configure Office 365 Threat Intelligence, integrate Office 365 Threat Intelligence with Office 365 services, integrate Office 365 Threat Intelligence with Windows Defender ATP, review threats and malware trends on the Office 365 ATP Threat Management dashboard, review threats and malware trends with Office 365 ATP Threat Explorer and Threat Tracker, create and review Office 365 ATP incidents, review quarantined items in ATP including Microsoft SharePoint Online, OneDrive for Business, Exchange Online, and Microsoft Teams, monitor online anti-malware solutions using Office 365 ATP reports, perform tests using Attack Simulator.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Implement and manage information protection (15-20%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Secure data access within Office 365.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan secure data access within Office 365, implement and manage Customer Lockbox, configure data access in Office 365 collaboration workloads, configure B2B sharing for external users.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage Azure information Protection (AIP).
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan an AIP solution, activate Azure Rights Management, configure usage rights, configure and manage super users, customize policy settings, create and configure labels and conditions, create and configure templates, configure languages, configure and use the AIP scanner, deploy the RMS connector, manage tenant keys, deploy the AIP client, track and revoke protected documents, integrate AIP with Microsoft Online Services.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage Data Loss Prevention (DLP).
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan a DLP solution, create and manage DLP policies, create and manage sensitive information types, monitor DLP reports, manage DLP notifications, create queries to locate sensitive data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Implement and manage Microsoft Cloud App Security.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan Cloud App Security implementation, configure Office 365 Cloud App Security, perform productivity app discovery using Cloud App Security, manage entries in the Cloud app catalog, manage third-party apps in Office 365 Cloud App Security, manage Microsoft Cloud App Security, configure Cloud App Security connectors, configure Cloud App Security policies, configure and manage Cloud App Security templates, configure Cloud App Security users and permissions, review and respond to Cloud App Security alerts, review and interpret Cloud App Security dashboards and reports, review and interpret Cloud App Security activity log and governance log.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Manage governance and compliance features in Microsoft 365 (25-30%)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Configure and analyze security reporting.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Interpret Windows Analytics, configure Windows Telemetry options, configure Office Telemetry options, review and interpret security reports and dashboards, plan for custom security reporting with Intelligent Security Graph, review Office 365 secure score action and recommendations, configure reports and dashboards in Azure Log Analytics, review and interpret reports and dashboards in Azure Log Analytics, configure alert policies in the Office 365 Security and Compliance Center.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage and analyze audit logs and reports.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for auditing and reporting, configure Office 365 auditing and reporting, perform audit log search, review and interpret compliance reports and dashboards, configure audit alert policy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Configure Office 365 classification and labeling.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for data governance classification and labels, search for personal data, apply labels to personal data, monitor for leaks of personal data, create and publish Office 365 labels, configure label policies.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage data governance and retention.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for data governance and retention, review and interpret data governance reports and dashboards, configure retention policies, define data governance event types, define data governance supervision policies, configure Information holds, find and recover deleted Office 365 data, import data in the Security and Compliance Center, configure data archiving, manage inactive mailboxes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage search and investigation.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for content search and eDiscovery, delegate permissions to use search and discovery tools, use search and investigation tools to perform content searches, export content search results, manage eDiscovery cases.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Manage data privacy regulation compliance.
-&lt;ul&gt;
-&lt;li&gt;May include but is not limited to: Plan for regulatory compliance in Microsoft 365, review and interpret GDPR dashboards and reports, manage Data Subject Requests (DSRs), review Compliance Manager reports, create and perform Compliance Manager assessments and action items.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Han publicado 300 plazas para el examen, con el descuento de 80% que se facilita en Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375191&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta y no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
-&lt;p&gt;Los enlaces de los cursos oficiales son los siguientes:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T01&#34;&gt;MS-500T01-A: Managing Microsoft 365 Identity and Access&lt;/a&gt;.&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T02&#34;&gt;MS-500T02-A: Implementing Microsoft 365 Threat Protection&lt;/a&gt;.&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T03&#34;&gt;MS-500T03-A: Implementing Microsoft 365 Information Protection&lt;/a&gt;.&lt;/br&gt;
-&lt;a href=&#34;https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T04&#34;&gt;MS-500T04-A: Administering Microsoft 365 Built-in Compliance&lt;/a&gt;.&lt;/br&gt;&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Microsoft 365 Certified: Modern Desktop Administrator Associate (beta)</title>
-      <link>https://mateoferreras.es/post/2018/12/microsoft-365-certified-modern-desktop-administrator-associate-beta/</link>
-      <pubDate>Mon, 03 Dec 2018 18:23:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2018/12/microsoft-365-certified-modern-desktop-administrator-associate-beta/</guid>
-      <description>
-        
-          &lt;p&gt;Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación &lt;a href=&#34;https://www.microsoft.com/en-us/learning/m365-enterprise-administrator.aspx&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Nuestra certificación de Modern Desktop Administrator Associate lo pondrá al día sobre los requisitos y la mecánica para implementar Windows 10, su primer paso para implementar las soluciones de Modern Desktop.&lt;/p&gt;
-&lt;p&gt;También aprenderá cómo simplificar sus implementaciones utilizando la actualización en el lugar, el piloto automático de Windows y las soluciones de identidad integradas para mejorar la experiencia del usuario y aumentar la productividad.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Podéis acceder al contenido de los exámenes en sus respectivas paginas de examen.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-100.aspx&#34;&gt;MD-100: Windows 10 (beta)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101: Managing Modern Desktops (beta)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Si ya tienes aprobado el examen 70-698 solo necesitas aprobar el examen &lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101: Managing Modern Desktops&lt;/a&gt; para obtener la certificación.&lt;/p&gt;
-&lt;p&gt;Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375176&#34;&gt;Microsoft Learning Community Blog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Nuevas certificaciones en fundamentos de Azure y Microsoft 365</title>
-      <link>https://mateoferreras.es/post/2018/11/2018-11-30t122800&#43;0100/</link>
-      <pubDate>Fri, 30 Nov 2018 12:28:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2018/11/2018-11-30t122800&#43;0100/</guid>
-      <description>
-        
-          &lt;p&gt;Microsoft ha anunciado nuevas certificaciones de nivel fundamentos que enlazan con las nuevas rutas de certificación basados en roles, que pusieron en marcha a finales de Septiembre de este año.&lt;/p&gt;
-&lt;p&gt;No obstante las rutas que habían anunciado eran de nivel experto o asociado.&lt;/p&gt;
-&lt;p&gt;Lo nuevos exámenes para adquirir la certificación nivel fundamentos, son los siguientes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-AZ-900.aspx&#34;&gt;AZ-900: Azure Fundamentals&lt;/a&gt;: Este examen está diseñado para candidatos que buscan demostrar un conocimiento básico de los servicios en la nube y cómo esos servicios se proporcionan con Microsoft Azure.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mateoferreras.es</title><link>https://mateoferreras.es/</link><description>Recent content on mateoferreras.es</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Thu, 15 Aug 2019 18:00:00 +0100</lastBuildDate><atom:link href="https://mateoferreras.es/index.xml" rel="self" type="application/rss+xml"/><item><title>Restablecer la contraseña DSRM</title><link>https://mateoferreras.es/post/2019/08/resetear-contrasena-dsrm/</link><pubDate>Thu, 15 Aug 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/08/resetear-contrasena-dsrm/</guid><description>
+&lt;p>La contraseña del Modo de restauración de servicios de directorio (DSRM) es necesaria para iniciar sesión en un controlador de dominio cuando no se ejecutan los Servicios de dominio de Active Directory (AD DS), bien porque se han detenido o porque el controlador de dominio se ha iniciado en Directory Services Restore Mode (DSRM).&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Nota&lt;/strong>&lt;/br>
+La contraseña de DSRM no es la contraseña de la cuenta del administrador del dominio.&lt;/p>
+&lt;/blockquote>
+&lt;p>Puede que en su momento no se realizase la documentación apropiada y que con el paso del tiempo se perdiese la contraseña, quizás nos vemos en la necesidad de restablecer la contraseña del Modo de restauración de servicios de directorio (DSRM) por un riesgo de seguridad. Para lo cual seria aplicar el proceso que siguiente.&lt;/p>
+&lt;h2 id="restablecer-la-contraseña-de-administrador-de-dsrm">Restablecer la contraseña de administrador de DSRM&lt;/h2>
+&lt;ol>
+&lt;li>Ejecutamos un símbolo del sistema como administrador.&lt;/li>
+&lt;li>Escribimos &lt;code>ntdsutil&lt;/code> y, a continuación, pulsamos &lt;strong>Enter&lt;/strong>.&lt;/li>
+&lt;li>En el símbolo del sistema de &lt;strong>NTDSUTIL&lt;/strong>, escribimos &lt;code>set dsrm password&lt;/code>.&lt;/li>
+&lt;li>En el símbolo del sistema de &lt;strong>DSRM&lt;/strong>, escribimos una de las siguientes líneas en función de nuestro objetivo:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>Para restablecer la contraseña en el servidor en el que estamos trabajando, escribimos &lt;code>reset password on server null&lt;/code>. &lt;em>La variable &lt;strong>NULL&lt;/strong> indica que la contraseña de DSRM se está restableciendo en el servidor local&lt;/em>. Escribimos la nueva contraseña cuando nos la solicita.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Para restablecer la contraseña en un servidor remoto, escribimos &lt;code>reset password on server servername&lt;/code>, &lt;em>donde la variable &lt;strong>SERVERNAME&lt;/strong> es el nombre DNS del servidor en el que queremos restablecer la contraseña de DSRM&lt;/em>. Escribimos la nueva contraseña cuando nos la solicita.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="5">
+&lt;li>En el símbolo del sistema &lt;strong>DSRM&lt;/strong>, escribimos &lt;code>q&lt;/code>.&lt;/li>
+&lt;li>En el símbolo del sistema de &lt;strong>NTDSUTIL&lt;/strong>, escribimos &lt;code>q&lt;/code> para salir.&lt;/li>
+&lt;/ol>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/08/cmd-ntdsutil.gif">
+&lt;/p>
+&lt;p>Accedemos al servidor en modo restauración:&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/08/restore-mode.gif">
+&lt;/p>
+&lt;h2 id="enlaces">Enlaces:&lt;/h2>
+&lt;p>&lt;a href="https://technet.microsoft.com/es-es/library/cc754363(v=ws.10).aspx">set DSRM password&lt;/a>&lt;/br>
+&lt;a href="https://blogs.technet.microsoft.com/meamcs/2012/05/29/reset-the-dsrm-administrator-password/">Reset the DSRM Administrator Password&lt;/a>&lt;/p></description></item><item><title>Deshabilitar IPv6 en Windows</title><link>https://mateoferreras.es/post/2019/04/deshabilitar-ipv6-windows/</link><pubDate>Sun, 07 Apr 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/04/deshabilitar-ipv6-windows/</guid><description>
+&lt;p>Desde el lanzamiento de Windows Server 2008 y Windows Vista viene integrado en los adaptadores de red Microsoft el protocolo IPv6.&lt;/p>
+&lt;p>Por diferentes motivos puede ser necesario deshabilitar el citado protocolo en alguno o la totalidad de los sistemas de nuestro entorno.&lt;/p>
+&lt;p>Para deshabilitar el protocolo de manera correcta, Microsoft nos facilita la siguiente &lt;a href="https://support.microsoft.com/es-es/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users">Guía para configurar IPv6 en Windows para usuarios avanzados&lt;/a>. Ya que si desmarcamos unicamente la opción de Protocolo de Internet versión 6 (TCP /IPv6), en las propiedades del adaptador de red, no se deshabilita completamente el uso del protocolo.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/adaptador.png">
+&lt;/p>
+&lt;p>Parámetros:&lt;/p>
+&lt;pre>&lt;code> Location: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\
+Name: DisabledComponents
+Type: REG_DWORD
+Min Value: 0x00
+Max Value: 0xFF (IPv6 disabled)
+&lt;/code>&lt;/pre>
+&lt;h2 id="pasos-para-deshabilitar-ipv6">Pasos para deshabilitar IPv6.&lt;/h2>
+&lt;p>1.- El primer paso es la modificación del registro del sistema, que se puede realizar de las siguientes maneras:&lt;/p>
+&lt;p>a.- Desde la consola del editor del registro (ejecutando como administrador):&lt;/br>
+Abrimos el editor de Registro.&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/regedit.png">
+&lt;/p>
+&lt;p>Navegamos a la ruta:&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/regedit_ruta.png">
+&lt;/p>
+&lt;p>Añadimos Elemento:&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/regedit_dword.png">
+&lt;/p>
+&lt;p>b.- Desde CMD (ejecutando como administrador):&lt;/p>
+&lt;pre>&lt;code> reg add &amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters&amp;quot; /v DisabledComponents /t REG_DWORD /d 0xFF /f
+&lt;/code>&lt;/pre>
+&lt;p>c.- Desde PowerShell (ejecutando como administrador):&lt;/p>
+&lt;pre>&lt;code> New-ItemProperty &amp;quot;HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\&amp;quot; -Name DisabledComponents -Value 0xFF -PropertyType DWord
+&lt;/code>&lt;/pre>
+&lt;p>2.- Una vez aplicada la modificación a través del registro, ya podemos proceder a desmarcar la opción en las propiedades del adaptador.&lt;/br>
+Para completar todo el proceso es necesario realizar un reinicio del sistema.&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/adaptaddor_disabled.png">
+&lt;/p>
+&lt;p>En el enlace facilitado anteriormente se amplia la información. También están disponibles diferentes scripts que realizan la configuración del protocolo de manera mas personalizada según sean nuestras necesidades.&lt;/p>
+&lt;h2 id="aplicarlo-mediante-políticas-de-grupo">Aplicarlo mediante políticas de grupo:&lt;/h2>
+&lt;p>Con una GPP, podemos desplegar claves en el registro.
+Abrir el editor de Directivas de Grupo, en Herramientas administrativas o bien creando una nueva consola de administración con MMC.&lt;/p>
+&lt;p>Desplegar el bosque, el dominio, etc… hasta &lt;strong>“Objetos de directiva de grupo“&lt;/strong>. Botón derecho con el ratón, del menú seleccionar &lt;strong>Nuevo&lt;/strong>.&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/gpo_create.png">
+&lt;/p>
+&lt;p>Introducir un nombre descriptivo, por ejemplo: &lt;strong>Disable_IPv6&lt;/strong>. Hacer clic en el botón &lt;strong>Aceptar&lt;/strong>.&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/gpo_create_name.png">
+&lt;/p>
+&lt;p>Seleccionar la nueva directiva que se acaba de crear, botón derecho, seleccionar &lt;strong>Editar…&lt;/strong>.&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/gpo_edit.png">
+&lt;/p>
+&lt;p>Como la rama está dentro de &lt;code>HKEY_LOCAL_MACHINE&lt;/code>, corresponderá a una GPP de equipo:&lt;/br>&lt;/p>
+&lt;pre>&lt;code> Configuración de equipo &amp;gt; Preferencias &amp;gt; Configuración de Windows &amp;gt; Registro
+Nuevo &amp;gt; Elemento del registro
+&lt;/code>&lt;/pre>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/gpo_edit_regedit.png">
+&lt;/p>
+&lt;p>Configuración de registro.&lt;/br>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/04/gpo_edit_regedit_create.png">
+&lt;/p>
+&lt;p>Finalmente, para aplicar los cambios al sistema operativo arrancado, &lt;strong>se deben reiniciar los equipos&lt;/strong>.&lt;/p></description></item><item><title>Microsoft 365 Certified: Modern Desktop Administrator Associate</title><link>https://mateoferreras.es/post/2019/03/microsoft-365-certified-modern-desktop-administrator-associate/</link><pubDate>Fri, 22 Mar 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/03/microsoft-365-certified-modern-desktop-administrator-associate/</guid><description>
+&lt;p>La primera quincena del año me presente a los exámenes de la certificación &lt;a href="https://www.microsoft.com/en-us/learning/modern-desktop.aspx">Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a>.&lt;/p>
+&lt;p>Estos exámenes los realice en el periodo beta, por lo que hasta esta pasada semana no publicaron los resultados de los mismos.&lt;/p>
+&lt;p>El resultado de ambos exámenes &lt;a href="https://www.microsoft.com/en-us/learning/exam-md-100.aspx">MD-100&lt;/a> y &lt;a href="https://www.microsoft.com/en-us/learning/exam-md-101.aspx">MD-101&lt;/a> ha sido aprobado, consiguiendo la certificación asociada.&lt;/p>
+&lt;p>Certificado Modern Desktop Administrator:&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/mca_md.png" alt="Certificado obtenido">
+&lt;/p>
+&lt;p>Aunque el ecosistema de puestos de trabajo no es uno de los áreas que mas trato a nivel laboral.&lt;/p>
+&lt;p>Creo que con las nuevas certificaciones se premia mas un conocimiento global que de una tecnología especifica.&lt;/p>
+&lt;p>Buen comienzo del año y espero que sea la primera certificación de las habilidades que me planteo adquirir este año.&lt;/p></description></item><item><title>Actualizaciones de Windows Server 2016 y proxy</title><link>https://mateoferreras.es/post/2019/03/actualizaciones-de-windows-server-2016-y-proxy/</link><pubDate>Thu, 21 Mar 2019 19:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/03/actualizaciones-de-windows-server-2016-y-proxy/</guid><description>
+&lt;p>Cuando preparaba una nueva plantilla de servidor con Windows Server 2016, he tenido problemas con las actualizaciones de Windows.&lt;/p>
+&lt;p>Siempre recurro a actualizar a través de Windows Update para asegurarme que no me dejo parches pendientes.&lt;/p>
+&lt;p>En esta ocasión al realizar la comprobación se mostraban diferentes parches disponibles y comenzaba el proceso de descarga.&lt;/p>
+&lt;p>Como este proceso es largo, en este punto me desentiendo del proceso y lo reviso posteriormente, tras unas horas vuelvo a comprobar el Servidor y este se encuentra al 0% de descarga.&lt;/p>
+&lt;p>En este punto verifico que no me hubiese dejado el proxy sin configurar en el navegador.&lt;/p>
+&lt;p>Compruebo que el servidor tiene acceso a Internet.&lt;/p>
+&lt;p>Reinicio el servicio de Windows Update y vuelvo a lanzar la comprobación con el mismo resultado.&lt;/p>
+&lt;p>Tras una búsqueda en Internet localizo el siguiente enlace de Microsoft a parte de otros blogs donde se detalla el mismo error: &lt;a href="https://docs.microsoft.com/es-es/windows/deployment/update/windows-update-troubleshooting#problemas-relacionados-con-el-proxy-http">Problemas relacionados con el Proxy HTTP&lt;/a>.&lt;/p>
+&lt;p>Parece que con Windows Server 2016 y Windows 10, las actualizaciones no utilizan el proxy a nivel nivel de usuario y lo requieren a nivel de sistema.&lt;/p>
+&lt;p>Para lo cual basta con ejecutar uno de los siguientes comando en un símbolo del sistema con privilegios de Administrador.&lt;/p>
+&lt;pre>&lt;code> netsh winhttp import proxy source=ie
+netsh winhttp set proxy &amp;lt;Proxy&amp;gt;:&amp;lt;Puerto&amp;gt;
+set proxy &amp;lt;Proxy&amp;gt;:&amp;lt;Puerto&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;p>Con el siguiente comando verificamos el estado:&lt;/p>
+&lt;pre>&lt;code> netsh winhttp show proxy
+&lt;/code>&lt;/pre>
+&lt;p>Tras la configuración del proxy del sistema reinicio nuevamente el servicio de Windows Update y relanzo la comprobación de parches.&lt;/p>
+&lt;p>En esta ocasión aparecen los parches y veo que progresa la descarga de los mismos.&lt;/p></description></item><item><title>Agregar Features on Demand desde imagen ISO</title><link>https://mateoferreras.es/post/2019/03/features-on-demand-iso/</link><pubDate>Thu, 21 Mar 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/03/features-on-demand-iso/</guid><description>
+&lt;p>Puede que en el entorno empresarial no funcione correctamente la instalación de las características opcionales (Features on Demand) de Windows.&lt;/p>
+&lt;p>Ya sea por las restricciones que se aplican a las redes o en función del diseño de la infraestructura.&lt;/p>
+&lt;p>En mi caso me he encontrado que al intentar agregar, en un equipo con Windows 10 versión 1809, la característica opcional Visor de XPS me daba un error.&lt;/p>
+&lt;p>Tras un intento de instalación que demora unos segundos, devuelve un mensaje de error de instalación, remitiéndote a contactar con el administrador.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/error.png">
+&lt;/p>
+Si intento realizar la instalación a través de PowerShell o DISM, también devuelve un error.
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/error_dism.png">
+&lt;/p>
+&lt;p>El problema en mi caso es debido a que el equipo Windows 10 se encuentra en una infraestructura System Center Configuration Manager. En la cual no esta habilitada la disponibilidad de las Características opcionales, por lo que el equipo intenta siempre ir al SCCM y no a Windows Update donde si están disponibles los binarios.&lt;/p>
+&lt;p>He conseguido realizar la instalación independiente desde una de las imágenes ISO.&lt;/p>
+&lt;p>Estas imagenes las tenemos disponibles si disponemos de una suscripción de MSDN o en el Volume Licensing Service Center.&lt;/p>
+&lt;p>Accedemos a nuestro Microsoft Volume Licensing Service Center y procedemos a descargar las imágenes ISO de los Features on Demand que correspondan a nuestra edición.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/vlcs_fod.png">
+&lt;/p>
+&lt;p>Elegimos las versión, de 32 bit o 64 bit según nos corresponda:&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/fod_1.png">
+&lt;/p>
+&lt;p>Descargables de 32 Bits.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/fod_32.png">
+&lt;/p>
+&lt;p>Descargables de 64 Bits.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/fod_64.png">
+&lt;/p>
+&lt;p>La funcionalidad que queremos agregar se encuentra en el Disk 1.&lt;/p>
+&lt;p>Descargamos la imagen y montamos como unidad en el equipo, también podemos descomprimirlo en una carpeta local o de red.&lt;/p>
+&lt;p>Abrimos una ventana de Powershell con privilegios administrativos.&lt;/p>
+&lt;p>Ejecutamos el siguiente comando &lt;code>DISM.EXE /Online /Add-package /PackagePath:&amp;lt;ruta del paquete&amp;gt;&lt;/code> para agregar la característica.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/dism_inst.png">
+&lt;/p>
+&lt;p>Cuando acaba el proceso, podemos verificar que ya disponemos de la Característica.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/visor.png">
+&lt;/p>
+&lt;p>Y en este caso también como aplicación en el sistema.&lt;/p>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/03/xps_app-1.png">
+&lt;/p>
+&lt;p>Es aplicable a las características FoD como las Herramientas RSAT a partir de la versión de Windows 10 1809.&lt;/p></description></item><item><title>Nueva certificación Azure</title><link>https://mateoferreras.es/post/2019/02/certificacion-azure/</link><pubDate>Thu, 21 Feb 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/02/certificacion-azure/</guid><description>
+&lt;p>Navegando por la pagina de Pearson Vue he localizado un nuevo examen de certificación que tiene la nomenclatura:&lt;/p>
+&lt;p>&lt;a href="https://wsr.pearsonvue.com/testtaker/registration/SelectExamPage.htm?actionMethod=testtaker%2Fregistration%2FSelectExamPage.xhtml%3AselectExamPageBean.selectExamSeriesAction%28%29&amp;amp;examSeriesId=39495&amp;amp;conversationId=616879">AZ-500: Microsoft Azure Security Technologies&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>&lt;span style="color:red">ACTUALIZACIÓN 06/03/2019&lt;/span>&lt;/strong>.&lt;/p>
+&lt;p>Todo apunta a una nueva certificación basada en roles centrada en la securización de Azure y sus servicios asociados.&lt;/p>
+&lt;p>Todavía desconozco si este examen completa una ruta como así hace el examen &lt;a href="https://www.microsoft.com/en-us/learning/exam-ms-500.aspx">MS-500: Microsoft 365 Security Administration&lt;/a> en el entorno de Microsoft 365, que permite conseguir la certificación &lt;a href="https://www.microsoft.com/en-us/learning/m365-security-administrator.aspx">Microsoft 365 Certified Security Administrator Associate&lt;/a>.&lt;/p>
+&lt;p>El examen ya aparece visible en la pagina de Pearson Vue y tienen como fecha de programación inicial el próximo día 27 de Febrero de 2019.&lt;/p>
+&lt;p>De momento no he localizado mas información al respecto del contenido del examen o de los recursos disponibles de formación. Entiendo que los irán publicando en las próximas semanas.&lt;/p>
+&lt;p>&lt;strong>&lt;span style="color:red">ACTUALIZACIÓN 06/03/2019&lt;/span>&lt;/strong>.&lt;/p>
+&lt;p>El examen ya no se encuentra disponible de la pagina de &lt;a href="http://www.pearsonvue.com/microsoft/exams/">Pearson VUE&lt;/a>, pero hoy esta activa la pagina de examen en el sitio de Microsoft.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-500.aspx">EXAM AZ-500: Microsoft Azure Security Technologies (beta)&lt;/a>&lt;/p>
+&lt;p>Estas son las habilidades medidas.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Manage Identity and Access (20-25%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Configure Microsoft Azure Active Directory for workloads
+&lt;ul>
+&lt;li>May include but is not limited to: Create App Registration, configure App Registration permission scopes, manage App Registration permission consent, configure Multi-Factor Authentication settings, manage Microsoft Azure AD directory groups, manage Microsoft Azure AD users, install and configure Microsoft Azure AD Connect, configure authentication methods, implement Conditional Access policies, configure Microsoft Azure AD identity protection&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure Microsoft Azure AD Privileged Identity Management
+&lt;ul>
+&lt;li>May include but is not limited to: Monitor privileged access, configure Access Reviews, activate Privileged Identity Management&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure Microsoft Azure tenant security
+&lt;ul>
+&lt;li>May include but is not limited to: Transfer Microsoft Azure subscriptions between Microsoft Azure AD tenants, manage API access to Microsoft Azure subscriptions and resources&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Implement Platform Protection (35-40%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Implement network security
+&lt;ul>
+&lt;li>May include but is not limited to: Configure virtual network connectivity, configure Network Security Groups (NSGs), create and configure Microsoft Azure Firewall, create and configure application security groups, configure remote access management, configure baseline, configure resource firewall&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement host security
+&lt;ul>
+&lt;li>May include but is not limited to: Configure endpoint security within the VM, configure VM security, harden VMs in Microsoft Azure, configure system updates for VMs in Microsoft Azure, configure baseline&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure container security
+&lt;ul>
+&lt;li>May include but is not limited to: Configure network, configure authentication, configure container isolation, configure AKS security, configure container registry, configure container instance security, implement vulnerability management&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement Microsoft Azure Resource management security
+&lt;ul>
+&lt;li>May include but is not limited to: Create Microsoft Azure resource locks, manage resource group security, configure Microsoft Azure policies, configure custom RBAC roles, configure subscription and resource permissions&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Manage Security Operations (15-20%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Configure security services
+&lt;ul>
+&lt;li>May include but is not limited to: Configure Microsoft Azure Monitor, configure Microsoft Azure Log Analytics, configure diagnostic logging and log retention, configure vulnerability scanning&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure security policies
+&lt;ul>
+&lt;li>May include but is not limited to: Configure centralized policy management by using Microsoft Azure Security Center, configure Just in Time VM access by using Microsoft Azure Security Center&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage security alerts
+&lt;ul>
+&lt;li>May include but is not limited to: Create and customize alerts, review and respond to alerts and recommendations, configure a playbook for a security event by using Microsoft Azure Security Center, investigate escalated security incidents&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Secure Data and Applications (30-35%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Configure security policies to manage data
+&lt;ul>
+&lt;li>May include but is not limited to: Configure data classification, configure data retention, configure data sovereignty&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure security for data infrastructure
+&lt;ul>
+&lt;li>May include but is not limited to: Enable database authentication, enable database auditing, configure Microsoft Azure SQL Database threat detection, configure access control for storage accounts, configure key management for storage accounts, create and manage Shared Access Signatures (SAS), configure security for HDInsights, configure security for Cosmos DB, configure security for Microsoft Azure Data Lake&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure encryption for data at rest
+&lt;ul>
+&lt;li>May include but is not limited to: Implement Microsoft Azure SQL Database Always Encrypted, implement database encryption, implement Storage Service Encryption, implement disk encryption, implement backup encryption&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement security for application delivery
+&lt;ul>
+&lt;li>May include but is not limited to: Implement security validations for application development, configure synthetic security transactions&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure application security
+&lt;ul>
+&lt;li>May include but is not limited to: Configure SSL/TLS certs, configure Microsoft Azure services to protect web apps, create an application security baseline&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure and manage Key Vault
+&lt;ul>
+&lt;li>May include but is not limited to: Manage access to Key Vault, manage permissions to secrets, certificates, and keys, manage certificates, manage secrets, configure key rotation&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p align="center">
+&lt;img src="https://mateoferreras.es/images/2019/02/AZ500.png">
+&lt;/p></description></item><item><title>Microsoft 365 Certified: Messaging Administrator Associate (beta)</title><link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-messaging-administrator-associate-beta/</link><pubDate>Mon, 28 Jan 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-messaging-administrator-associate-beta/</guid><description>
+&lt;p>Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación Microsoft 365 Certified: Messaging Administrator Associate.&lt;/p>
+&lt;blockquote>
+&lt;p>Si eres un administrador de Exchange, esta es la certificación para ti.&lt;/p>
+&lt;p>La tecnología ha brindado a las empresas una amplia gama de opciones para comunicarse tanto dentro como fuera de las organizaciones, pero con el acceso ampliado se genera un riesgo; Las empresas necesitan administradores que sepan cómo mitigar esos riesgos.&lt;/p>
+&lt;p>Esta certificación validará que tiene las habilidades que necesita para diseñar y administrar soluciones de comunicaciones seguras y compatibles con el conjunto de herramientas líderes de la industria de Microsoft 365.&lt;/p>
+&lt;/blockquote>
+&lt;p>Desde las respectivas paginas de los exámenes ya se pueden programar los mismos.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-ms-200.aspx">MS-200: Planning and Configuring a Messaging Platform&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/exam-ms-201.aspx">MS-201: Implementing a Hybrid and Secure Messaging Platform&lt;/a>&lt;/p>
+&lt;p>Si ya tienes aprobado el examen &lt;a href="https://www.microsoft.com/es-es/learning/exam-70-345.aspx">70-345&lt;/a> solo debes aprobar el examen &lt;a href="https://www.microsoft.com/en-us/learning/exam-ms-202.aspx">MS-202: Microsoft 365 Messaging Administrator Certification Transition Exam&lt;/a> para obtener la certificación.&lt;/p>
+&lt;p>Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375196">Microsoft Learning Community Blog&lt;/a>&lt;/p>
+&lt;p>Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p>
+&lt;p>Los enlaces de los cursos oficiales son los siguientes:&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T01">MS-200T01: Understanding the Modern Messaging Infrastructure&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T02">MS-200T02: Managing Client Access and Mail Flow&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-200T03">MS-200T03: Managing Messaging High Availability and Disaster Recovery&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-201T01">MS-201T01: Defining a Hybrid Messaging Strategy&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-201T02">MS-201T02: Managing Messaging Security, Hygiene, and Compliance&lt;/a>&lt;/p></description></item><item><title>Microsoft 365 Certified: Teamwork Administrator Associate (beta)</title><link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-teamwork-administrator-associate-beta/</link><pubDate>Mon, 14 Jan 2019 19:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-teamwork-administrator-associate-beta/</guid><description>
+&lt;p>Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación &lt;a href="https://www.microsoft.com/en-us/learning/m365-teamwork-administrator.aspx">Microsoft 365 Certified: Teamwork Administrator Associate&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>Las herramientas de colaboración están en el centro del lugar de trabajo moderno.&lt;/p>
+&lt;p>Los equipos deben poder acceder y revisar sus datos más rápido que nunca, y necesitan soluciones integradas que sean seguras y escalables y que no obstaculicen a una fuerza laboral distribuida.&lt;/p>
+&lt;p>Esta certificación validará sus habilidades para diseñar soluciones elegantes, seguras y compatibles que resuelvan los rompecabezas de productividad más desafiantes de su empresa.&lt;/p>
+&lt;/blockquote>
+&lt;p>Desde las respectivas paginas de los exámenes ya se pueden programar los mismos.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-MS-300.aspx">MS-300: Deploying Microsoft 365 Teamwork&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-MS-301.aspx">MS-301: Deploying SharePoint Server Hybrid&lt;/a>&lt;/p>
+&lt;p>Si ya tienes aprobado el examen 70-339 solo debes aprobar el examen &lt;a href="https://www.microsoft.com/en-us/learning/exam-MS-302.aspx">MS-302: Microsoft 365 Teamwork Administrator Certification Transition Exam&lt;/a> para obtener la certificación.&lt;/p>
+&lt;p>Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375195">Microsoft Learning Community Blog&lt;/a>&lt;/p>
+&lt;p>Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p>
+&lt;p>Los enlaces de los cursos oficiales son los siguientes:&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T01">MS-300T01: Managing Office 365 Content Services&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T02">MS-300T02: Managing SharePoint Online&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T03">MS-300T03: Enabling Microsoft Teams for Collaboration&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-300T04">MS-300T04: Enabling Office 365 Workloads for Collaboration&lt;/a>&lt;/br>&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T01">MS-301T01: Implementing SharePoint 2019 Infrastructure&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T02">MS-301T02: Implementing SharePoint 2019 Service Applications&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T03">MS-301T03: Implementing SharePoint Hybrid Scenarios&lt;/a>&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-301T04">MS-301T04: Migrating to SharePoint Online&lt;/a>&lt;/br>&lt;/p></description></item><item><title>Microsoft 365 Certified: Security Administrator Associate (beta)</title><link>https://mateoferreras.es/post/2019/01/microsoft-365-certified-security-administrator-associate-beta/</link><pubDate>Mon, 07 Jan 2019 18:00:00 +0100</pubDate><guid>https://mateoferreras.es/post/2019/01/microsoft-365-certified-security-administrator-associate-beta/</guid><description>
+&lt;p>Ya se ha publicado hoy la disponibilidad del examen en periodo beta de la nueva certificación &lt;a href="https://www.microsoft.com/en-us/learning/m365-security-administrator.aspx">Microsoft 365 Certified: Security Administrator Associate&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>La supervisión de los administradores de seguridad calificados no solo es crucial para el éxito de las operaciones y las implementaciones de TI, Forbes informa que también es uno de los roles más demandados en tecnología y se espera que la brecha de talento siga creciendo.&lt;/p>
+&lt;p>Esta certificación le mostrará a su organización que posee las habilidades necesarias para proteger a su empresa contra amenazas de ciberseguridad cada vez más complejas y para cumplir con la regulación de datos cada vez más diversificada y en capas.&lt;/p>
+&lt;/blockquote>
+&lt;p>Desde la pagina del examen ya se puede programar el mismo.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-MS-500.aspx">MS-500: Microsoft 365 Security Administrator&lt;/a>&lt;/p>
+&lt;p>Podéis acceder al contenido del examen en su respectiva pagina de examen y es el que cito a continuación.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Implement and manage identity and access (30-25%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Secure Microsoft 365 hybrid environments.
+&lt;ul>
+&lt;li>May include but is not limited to: Configure and manage security integration components in Microsoft 365 hybrid environments, including connectivity, synchronization services, and authentication, plan Azure AD authentication options, plan Azure AD synchronization options, monitor and interpret Azure AD Connect events.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Secure user accounts.
+&lt;ul>
+&lt;li>May include but is not limited to: Implement Azure AD dynamic group membership, implement Azure AD Self-service password reset, manage Azure AD access reviews.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement authentication methods.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan sign-on security, implement multi-factor authentication (MFA), manage and monitor MFA, implement device sign-on methods, manage authentication methods, monitor authentication methods.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement conditional access.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for compliance and conditional access policies, configure and manage device compliance policy, configure and manage conditional access policy, monitor Conditional Access and Device Compliance.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement role-based access control (RBAC).
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for RBAC, configure RBAC, monitor RBAC usage.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement Azure AD Privileged Identity Management (PIM)
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for Azure PIM, configure and manage Azure PIM, monitor Azure PIM.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement Azure AD Identity Protection.
+&lt;ul>
+&lt;li>May include but is not limited to: Implement user risk policy, implement sign-in risk policy, configure Identity Protection alerts, review and respond to risk events.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Implement and manage threat protection (20-25%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Implement an enterprise hybrid threat protection solution.&lt;/li>
+&lt;li>May include but is not limited to: Plan an Azure Advanced Threat Protection (ATP) solution, install and configure Azure ATP, manage Azure ATP workspace health, generate Azure ATP reports, integrate Azure ATP with Windows Defender ATP, monitor Azure ATP, manage suspicious activities.&lt;/li>
+&lt;li>Implement device threat protection.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan and implement a Windows Defender ATP solution, manage Windows Defender ATP, monitor Windows Defender ATP.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement and manage device and application protection.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for device protection, configure and manage Windows Defender Application Guard, configure and manage Windows Defender Application Control, configure and manage Windows Defender Exploit Guard, configure Secure Boot, configure and manage Windows 10 device encryption, configure and manage non-Windows device encryption, plan for securing applications data on devices, define managed apps for Mobile Application Management (MAM), protect your enterprise data using Windows Information Protection (WIP), configure WIP policies, configure Intune App Protection policies for non-Windows devices.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement and manage Office 365 messaging protection.
+&lt;ul>
+&lt;li>May include but is not limited to: Configure Office 365 ATP anti-phishing protection, configure Office 365 ATP anti-phishing policies, define users and domains to protect with Office 365 ATP Anti-phishing, configure Office 365 ATP anti-spoofing, configure actions against impersonation, configure Office 365 ATP anti-spam protection, enable Office 365 ATP Safe-Attachments, configure Office 365 ATP Safe Attachments policies, configure Office 365 ATP Safe Attachments options, configure Office 365 ATP Safe Links options, configure Office 365 ATP Safe Links blocked URLs, configure Office 365 ATP Safe Links policies.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement and manage Office 365 threat protection.
+&lt;ul>
+&lt;li>May include but is not limited to: Configure Office 365 Threat Intelligence, integrate Office 365 Threat Intelligence with Office 365 services, integrate Office 365 Threat Intelligence with Windows Defender ATP, review threats and malware trends on the Office 365 ATP Threat Management dashboard, review threats and malware trends with Office 365 ATP Threat Explorer and Threat Tracker, create and review Office 365 ATP incidents, review quarantined items in ATP including Microsoft SharePoint Online, OneDrive for Business, Exchange Online, and Microsoft Teams, monitor online anti-malware solutions using Office 365 ATP reports, perform tests using Attack Simulator.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Implement and manage information protection (15-20%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Secure data access within Office 365.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan secure data access within Office 365, implement and manage Customer Lockbox, configure data access in Office 365 collaboration workloads, configure B2B sharing for external users.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage Azure information Protection (AIP).
+&lt;ul>
+&lt;li>May include but is not limited to: Plan an AIP solution, activate Azure Rights Management, configure usage rights, configure and manage super users, customize policy settings, create and configure labels and conditions, create and configure templates, configure languages, configure and use the AIP scanner, deploy the RMS connector, manage tenant keys, deploy the AIP client, track and revoke protected documents, integrate AIP with Microsoft Online Services.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage Data Loss Prevention (DLP).
+&lt;ul>
+&lt;li>May include but is not limited to: Plan a DLP solution, create and manage DLP policies, create and manage sensitive information types, monitor DLP reports, manage DLP notifications, create queries to locate sensitive data.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Implement and manage Microsoft Cloud App Security.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan Cloud App Security implementation, configure Office 365 Cloud App Security, perform productivity app discovery using Cloud App Security, manage entries in the Cloud app catalog, manage third-party apps in Office 365 Cloud App Security, manage Microsoft Cloud App Security, configure Cloud App Security connectors, configure Cloud App Security policies, configure and manage Cloud App Security templates, configure Cloud App Security users and permissions, review and respond to Cloud App Security alerts, review and interpret Cloud App Security dashboards and reports, review and interpret Cloud App Security activity log and governance log.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Manage governance and compliance features in Microsoft 365 (25-30%)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Configure and analyze security reporting.
+&lt;ul>
+&lt;li>May include but is not limited to: Interpret Windows Analytics, configure Windows Telemetry options, configure Office Telemetry options, review and interpret security reports and dashboards, plan for custom security reporting with Intelligent Security Graph, review Office 365 secure score action and recommendations, configure reports and dashboards in Azure Log Analytics, review and interpret reports and dashboards in Azure Log Analytics, configure alert policies in the Office 365 Security and Compliance Center.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage and analyze audit logs and reports.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for auditing and reporting, configure Office 365 auditing and reporting, perform audit log search, review and interpret compliance reports and dashboards, configure audit alert policy&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Configure Office 365 classification and labeling.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for data governance classification and labels, search for personal data, apply labels to personal data, monitor for leaks of personal data, create and publish Office 365 labels, configure label policies.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage data governance and retention.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for data governance and retention, review and interpret data governance reports and dashboards, configure retention policies, define data governance event types, define data governance supervision policies, configure Information holds, find and recover deleted Office 365 data, import data in the Security and Compliance Center, configure data archiving, manage inactive mailboxes.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage search and investigation.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for content search and eDiscovery, delegate permissions to use search and discovery tools, use search and investigation tools to perform content searches, export content search results, manage eDiscovery cases.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Manage data privacy regulation compliance.
+&lt;ul>
+&lt;li>May include but is not limited to: Plan for regulatory compliance in Microsoft 365, review and interpret GDPR dashboards and reports, manage Data Subject Requests (DSRs), review Compliance Manager reports, create and perform Compliance Manager assessments and action items.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>Han publicado 300 plazas para el examen, con el descuento de 80% que se facilita en Microsoft Learning Community Blog en el siguiente enlace.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375191">Microsoft Learning Community Blog&lt;/a>&lt;/p>
+&lt;p>Recordar que las notas de los exámenes que se encuentran en el periodo beta y no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p>
+&lt;p>Los enlaces de los cursos oficiales son los siguientes:&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T01">MS-500T01-A: Managing Microsoft 365 Identity and Access&lt;/a>.&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T02">MS-500T02-A: Implementing Microsoft 365 Threat Protection&lt;/a>.&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T03">MS-500T03-A: Implementing Microsoft 365 Information Protection&lt;/a>.&lt;/br>
+&lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=MS-500T04">MS-500T04-A: Administering Microsoft 365 Built-in Compliance&lt;/a>.&lt;/br>&lt;/p></description></item><item><title>Microsoft 365 Certified: Modern Desktop Administrator Associate (beta)</title><link>https://mateoferreras.es/post/2018/12/microsoft-365-certified-modern-desktop-administrator-associate-beta/</link><pubDate>Mon, 03 Dec 2018 18:23:00 +0100</pubDate><guid>https://mateoferreras.es/post/2018/12/microsoft-365-certified-modern-desktop-administrator-associate-beta/</guid><description>
+&lt;p>Ya se ha anunciado la disponibilidad de los exámenes en periodo beta de la nueva certificación &lt;a href="https://www.microsoft.com/en-us/learning/m365-enterprise-administrator.aspx">Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>Nuestra certificación de Modern Desktop Administrator Associate lo pondrá al día sobre los requisitos y la mecánica para implementar Windows 10, su primer paso para implementar las soluciones de Modern Desktop.&lt;/p>
+&lt;p>También aprenderá cómo simplificar sus implementaciones utilizando la actualización en el lugar, el piloto automático de Windows y las soluciones de identidad integradas para mejorar la experiencia del usuario y aumentar la productividad.&lt;/p>
+&lt;/blockquote>
+&lt;p>Podéis acceder al contenido de los exámenes en sus respectivas paginas de examen.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.microsoft.com/en-us/learning/exam-md-100.aspx">MD-100: Windows 10 (beta)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.microsoft.com/en-us/learning/exam-md-101.aspx">MD-101: Managing Modern Desktops (beta)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Si ya tienes aprobado el examen 70-698 solo necesitas aprobar el examen &lt;a href="https://www.microsoft.com/en-us/learning/exam-md-101.aspx">MD-101: Managing Modern Desktops&lt;/a> para obtener la certificación.&lt;/p>
+&lt;p>Han publicado 300 plazas para los cada uno de los exámenes con el descuento de 80% que facilita Microsoft Learning Community Blog en el siguiente enlace.&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375176">Microsoft Learning Community Blog&lt;/a>&lt;/p>
+&lt;p>Recordar que las notas de los exámenes que se encuentran en el periodo beta no se facilitan en la finalizaron del mismo, sino que se publicaran transcurrido un periodo desde que el examen finaliza su plazo de beta.&lt;/p></description></item><item><title>Nuevas certificaciones en fundamentos de Azure y Microsoft 365</title><link>https://mateoferreras.es/post/2018/11/2018-11-30t122800+0100/</link><pubDate>Fri, 30 Nov 2018 12:28:00 +0100</pubDate><guid>https://mateoferreras.es/post/2018/11/2018-11-30t122800+0100/</guid><description>
+&lt;p>Microsoft ha anunciado nuevas certificaciones de nivel fundamentos que enlazan con las nuevas rutas de certificación basados en roles, que pusieron en marcha a finales de Septiembre de este año.&lt;/p>
+&lt;p>No obstante las rutas que habían anunciado eran de nivel experto o asociado.&lt;/p>
+&lt;p>Lo nuevos exámenes para adquirir la certificación nivel fundamentos, son los siguientes:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-900.aspx">AZ-900: Azure Fundamentals&lt;/a>: Este examen está diseñado para candidatos que buscan demostrar un conocimiento básico de los servicios en la nube y cómo esos servicios se proporcionan con Microsoft Azure.
 El examen está dirigido a candidatos con antecedentes no técnicos, como aquellos involucrados en la venta o la compra de soluciones y servicios basados ​​en la nube o que tienen alguna participación en soluciones y servicios basados ​​en la nube, así como aquellos con un historial técnico que tienen la necesidad de validar su conocimiento a nivel fundacional en torno a los servicios en la nube.
 No se requiere experiencia técnica en TI, sin embargo, algún conocimiento o experiencia general en TI sería beneficioso.
 Este examen se puede tomar como un primer paso opcional para aprender sobre los servicios en la nube y cómo Microsoft Azure ejemplifica esos conceptos.
 Se puede tomar como un precursor de los exámenes de Microsoft Azure o de los servicios de nube de Microsoft.
-Si bien sería un primer paso beneficioso, validar el conocimiento del nivel básico, tomar este examen no es un requisito previo antes de tomar cualquier otra certificación basada en Azure. &lt;strong&gt;Disponible 31/12/2018&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-MS-900.aspx&#34;&gt;MS-900: M365 Fundamentals&lt;/a&gt;: Este examen está diseñado para candidatos que buscan demostrar conocimientos básicos de las consideraciones y beneficios de la adopción de servicios en la nube en general y el software como un modelo de nube de servicio (SaaS).
+Si bien sería un primer paso beneficioso, validar el conocimiento del nivel básico, tomar este examen no es un requisito previo antes de tomar cualquier otra certificación basada en Azure. &lt;strong>Disponible 31/12/2018&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-MS-900.aspx">MS-900: M365 Fundamentals&lt;/a>: Este examen está diseñado para candidatos que buscan demostrar conocimientos básicos de las consideraciones y beneficios de la adopción de servicios en la nube en general y el software como un modelo de nube de servicio (SaaS).
 Este examen también cubrirá el conocimiento de las opciones disponibles y los beneficios obtenidos al implementar las ofertas de servicios en la nube de Microsoft 365.
-Este examen puede tomarse como un precursor de los exámenes de tecnología y computación en la nube, como Office 365, Microsoft Intune, Azure Information Protection (AIP) y Windows 10. &lt;strong&gt;Disponible 29/12/2018&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Ambos exámenes no son requeridos en ninguna de las rutas para los niveles asociado o experto, pero son el punto de encuentro con los conceptos básicos de dichas rutas.&lt;/p&gt;
-&lt;p&gt;Fuente: &lt;a href=&#34;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375177&#34;&gt;https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375177&lt;/a&gt;&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Futuras certificaciones Microsoft</title>
-      <link>https://mateoferreras.es/post/2018/11/futuras-certificaciones-microsoft/</link>
-      <pubDate>Mon, 19 Nov 2018 19:16:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2018/11/futuras-certificaciones-microsoft/</guid>
-      <description>
-        
-          &lt;p&gt;Tras una búsqueda esta tarde para intentar ampliar la información sobre la certificación de Windows 10 he localizado en proveedores de formación Microsoft, como www.certificationcamps.com, itcareercamps.com o www.lrseducationservices.com; información&lt;/p&gt;
-&lt;p&gt;relativa a otras certificaciones de productos Microsoft que se van a publicar entre finales de año o comienzos del año que viene.&lt;/p&gt;
-&lt;p&gt;Entre las paginas de los diferente proveedores en una de ellas incorporan la siguiente imagen de hoja de ruta, que complementa las hojas de rutas anteriores que publico Microsoft.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://mateoferreras.es/images/2018/11/m365_overview.png&#34; alt=&#34;Roadmap&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Como indican en las diferentes paginas estas informaciones pueden sufrir modificaciones ya que no son las versiones finales.&lt;/p&gt;
-&lt;h2 id=&#34;microsoft-365-certified-modern-desktop-administrator-associate-windows-10&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate (Windows 10)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MD-100: Windows 10&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 03 de diciembre de 2018&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MD-100T01: Installing Windows 10&lt;/li&gt;
-&lt;li&gt;MD-100T02: Configuring Windows 10&lt;/li&gt;
-&lt;li&gt;MD-100T03: Protecting Windows 10&lt;/li&gt;
-&lt;li&gt;MD-100T04: Maintaining Windows 10&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MD-101: Managing Modern Desktops&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 03 de diciembre de 2018&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MD-101T01: Deploying the Modern Desktop&lt;/li&gt;
-&lt;li&gt;MD-101T02: Protecting Modern Desktops and Devices&lt;/li&gt;
-&lt;li&gt;MD-101T03: Managing Modern Desktops and Devices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Si ya tienes aprobado el examen 70-698 solo necesitas aprobar el examen MD-101: Managing Modern Desktops para obtener la certificación.&lt;/p&gt;
-&lt;h2 id=&#34;microsoft-365-certified-messaging-administrator-associate&#34;&gt;Microsoft 365 Certified: Messaging Administrator Associate&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-200: Planning and Configuring a Messaging Platform&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 28 de enero de 2019&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MS-200T01: Understanding the Modern Messaging Infrastructure&lt;/li&gt;
-&lt;li&gt;MS-200T02: Managing Client Access and Mail Flow&lt;/li&gt;
-&lt;li&gt;MS-200T03: Managing Messaging High Availability and Disaster Recovery&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-201: Implementing a Hybrid and Secure Messaging Platform&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 28 de enero de 2019&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MS-201T01: Defining a Hybrid Messaging Strategy&lt;/li&gt;
-&lt;li&gt;MS-201T02: Managing Messaging Security, Hygiene, and Compliance&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Si ya tienes aprobado el examen 70-345 solo debes aprobar el examen MS-202: Microsoft 365 Messaging Administrator Certification Transition Exam para obtener la certificación.&lt;/p&gt;
-&lt;h2 id=&#34;microsoft-365-certified-teamwork-administrator-associate-sharepoint-2019&#34;&gt;Microsoft 365 Certified: Teamwork Administrator Associate (SharePoint 2019)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-300: Deploying Microsoft 365 Teamwork&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 14 de enero de 2019&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MS-300T01: Managing Office 365 Content Services&lt;/li&gt;
-&lt;li&gt;MS-300T02: Managing SharePoint Online&lt;/li&gt;
-&lt;li&gt;MS-300T03: Enabling Microsoft Teams for Collaboration&lt;/li&gt;
-&lt;li&gt;MS-300T04: Enabling Office 365 Workloads for Collaboration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-301: Deploying SharePoint Server Hybrid&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 14 de enero de 2019&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MS-301T01: Implementing SharePoint 2019 Infrastructure&lt;/li&gt;
-&lt;li&gt;MS-301T02: Implementing SharePoint 2019 Service Applications&lt;/li&gt;
-&lt;li&gt;MS-301T03: Implementing SharePoint Hybrid Scenarios&lt;/li&gt;
-&lt;li&gt;MS-301T04: Migrating to SharePoint Online&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Si ya tienes aprobado el examen 70-339 solo debes aprobar el examen MS-302: Microsoft 365 Teamwork Administrator Certification Transition Exam para obtener la certificación.&lt;/p&gt;
-&lt;h2 id=&#34;microsoft-365-certified-security-administrator-associate&#34;&gt;Microsoft 365 Certified: Security Administrator Associate&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Examen:&lt;/strong&gt; MS-500: Microsoft 365 Security Administrator&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Publicación en beta:&lt;/strong&gt; 07 de enero de 2019&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cursos de formación:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MS-500T01: Managing Microsoft 365 Identity and Access&lt;/li&gt;
-&lt;li&gt;MS-500T02: Implementing Microsoft 365 Threat Protection&lt;/li&gt;
-&lt;li&gt;MS-500T03: Implementing Microsoft 365 Information Protection&lt;/li&gt;
-&lt;li&gt;MS-500T04: Administering Microsoft 365 Built-in Compliance&lt;/li&gt;
-&lt;/ul&gt;
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Microsoft 365 Certified: Modern Desktop Administrator Associate</title>
-      <link>https://mateoferreras.es/post/2018/11/mca-moderm-desktop/</link>
-      <pubDate>Mon, 12 Nov 2018 22:04:00 +0100</pubDate>
-      
-      <guid>https://mateoferreras.es/post/2018/11/mca-moderm-desktop/</guid>
-      <description>
-        
-          &lt;p&gt;Con la primera entrada del blog quiero anticipar la siguiente ruta de certificación que Microsoft publicara dentro de los nuevos Certificados basados en roles, esta nueva certificación esta denominada como:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/modern-desktop.aspx&#34;&gt;Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Esta ruta es nivel Associate y consta de dos exámenes para completarla, los cuales ya aparecen visibles en la pagina de &lt;a href=&#34;http://www.pearsonvue.com/microsoft/exams/&#34;&gt;Pearson Vue&lt;/a&gt; y tienen como fecha de programación inicial el próximo día 3 de Diciembre de 2018. Son los siguientes:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-100.aspx&#34;&gt;MD-100: Windows 10 (beta)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/learning/exam-md-101.aspx&#34;&gt;MD-101: Managing Modern Desktops (beta)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;De momento no he localizado mas información al respecto de dichos exámenes en cuanto a su contenido y los recursos disponibles de formación. Entiendo que los irán publicando en las próximas semanas.&lt;/p&gt;
-        
-      </description>
-    </item>
-    
-  </channel>
-</rss>
+Este examen puede tomarse como un precursor de los exámenes de tecnología y computación en la nube, como Office 365, Microsoft Intune, Azure Information Protection (AIP) y Windows 10. &lt;strong>Disponible 29/12/2018&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Ambos exámenes no son requeridos en ninguna de las rutas para los niveles asociado o experto, pero son el punto de encuentro con los conceptos básicos de dichas rutas.&lt;/p>
+&lt;p>Fuente: &lt;a href="https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375177">https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&amp;amp;Id=375177&lt;/a>&lt;/p></description></item><item><title>Futuras certificaciones Microsoft</title><link>https://mateoferreras.es/post/2018/11/futuras-certificaciones-microsoft/</link><pubDate>Mon, 19 Nov 2018 19:16:00 +0100</pubDate><guid>https://mateoferreras.es/post/2018/11/futuras-certificaciones-microsoft/</guid><description>
+&lt;p>Tras una búsqueda esta tarde para intentar ampliar la información sobre la certificación de Windows 10 he localizado en proveedores de formación Microsoft, como www.certificationcamps.com, itcareercamps.com o www.lrseducationservices.com; información&lt;/p>
+&lt;p>relativa a otras certificaciones de productos Microsoft que se van a publicar entre finales de año o comienzos del año que viene.&lt;/p>
+&lt;p>Entre las paginas de los diferente proveedores en una de ellas incorporan la siguiente imagen de hoja de ruta, que complementa las hojas de rutas anteriores que publico Microsoft.&lt;/p>
+&lt;p>&lt;img src="https://mateoferreras.es/images/2018/11/m365_overview.png" alt="Roadmap">&lt;/p>
+&lt;p>Como indican en las diferentes paginas estas informaciones pueden sufrir modificaciones ya que no son las versiones finales.&lt;/p>
+&lt;h2 id="microsoft-365-certified-modern-desktop-administrator-associate-windows-10">Microsoft 365 Certified: Modern Desktop Administrator Associate (Windows 10)&lt;/h2>
+&lt;p>&lt;strong>Examen:&lt;/strong> MD-100: Windows 10&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 03 de diciembre de 2018&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MD-100T01: Installing Windows 10&lt;/li>
+&lt;li>MD-100T02: Configuring Windows 10&lt;/li>
+&lt;li>MD-100T03: Protecting Windows 10&lt;/li>
+&lt;li>MD-100T04: Maintaining Windows 10&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Examen:&lt;/strong> MD-101: Managing Modern Desktops&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 03 de diciembre de 2018&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MD-101T01: Deploying the Modern Desktop&lt;/li>
+&lt;li>MD-101T02: Protecting Modern Desktops and Devices&lt;/li>
+&lt;li>MD-101T03: Managing Modern Desktops and Devices&lt;/li>
+&lt;/ul>
+&lt;p>Si ya tienes aprobado el examen 70-698 solo necesitas aprobar el examen MD-101: Managing Modern Desktops para obtener la certificación.&lt;/p>
+&lt;h2 id="microsoft-365-certified-messaging-administrator-associate">Microsoft 365 Certified: Messaging Administrator Associate&lt;/h2>
+&lt;p>&lt;strong>Examen:&lt;/strong> MS-200: Planning and Configuring a Messaging Platform&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 28 de enero de 2019&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MS-200T01: Understanding the Modern Messaging Infrastructure&lt;/li>
+&lt;li>MS-200T02: Managing Client Access and Mail Flow&lt;/li>
+&lt;li>MS-200T03: Managing Messaging High Availability and Disaster Recovery&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Examen:&lt;/strong> MS-201: Implementing a Hybrid and Secure Messaging Platform&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 28 de enero de 2019&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MS-201T01: Defining a Hybrid Messaging Strategy&lt;/li>
+&lt;li>MS-201T02: Managing Messaging Security, Hygiene, and Compliance&lt;/li>
+&lt;/ul>
+&lt;p>Si ya tienes aprobado el examen 70-345 solo debes aprobar el examen MS-202: Microsoft 365 Messaging Administrator Certification Transition Exam para obtener la certificación.&lt;/p>
+&lt;h2 id="microsoft-365-certified-teamwork-administrator-associate-sharepoint-2019">Microsoft 365 Certified: Teamwork Administrator Associate (SharePoint 2019)&lt;/h2>
+&lt;p>&lt;strong>Examen:&lt;/strong> MS-300: Deploying Microsoft 365 Teamwork&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 14 de enero de 2019&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MS-300T01: Managing Office 365 Content Services&lt;/li>
+&lt;li>MS-300T02: Managing SharePoint Online&lt;/li>
+&lt;li>MS-300T03: Enabling Microsoft Teams for Collaboration&lt;/li>
+&lt;li>MS-300T04: Enabling Office 365 Workloads for Collaboration&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Examen:&lt;/strong> MS-301: Deploying SharePoint Server Hybrid&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 14 de enero de 2019&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MS-301T01: Implementing SharePoint 2019 Infrastructure&lt;/li>
+&lt;li>MS-301T02: Implementing SharePoint 2019 Service Applications&lt;/li>
+&lt;li>MS-301T03: Implementing SharePoint Hybrid Scenarios&lt;/li>
+&lt;li>MS-301T04: Migrating to SharePoint Online&lt;/li>
+&lt;/ul>
+&lt;p>Si ya tienes aprobado el examen 70-339 solo debes aprobar el examen MS-302: Microsoft 365 Teamwork Administrator Certification Transition Exam para obtener la certificación.&lt;/p>
+&lt;h2 id="microsoft-365-certified-security-administrator-associate">Microsoft 365 Certified: Security Administrator Associate&lt;/h2>
+&lt;p>&lt;strong>Examen:&lt;/strong> MS-500: Microsoft 365 Security Administrator&lt;/p>
+&lt;p>&lt;strong>Publicación en beta:&lt;/strong> 07 de enero de 2019&lt;/p>
+&lt;p>&lt;strong>Cursos de formación:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>MS-500T01: Managing Microsoft 365 Identity and Access&lt;/li>
+&lt;li>MS-500T02: Implementing Microsoft 365 Threat Protection&lt;/li>
+&lt;li>MS-500T03: Implementing Microsoft 365 Information Protection&lt;/li>
+&lt;li>MS-500T04: Administering Microsoft 365 Built-in Compliance&lt;/li>
+&lt;/ul></description></item><item><title>Microsoft 365 Certified: Modern Desktop Administrator Associate</title><link>https://mateoferreras.es/post/2018/11/mca-moderm-desktop/</link><pubDate>Mon, 12 Nov 2018 22:04:00 +0100</pubDate><guid>https://mateoferreras.es/post/2018/11/mca-moderm-desktop/</guid><description>
+&lt;p>Con la primera entrada del blog quiero anticipar la siguiente ruta de certificación que Microsoft publicara dentro de los nuevos Certificados basados en roles, esta nueva certificación esta denominada como:&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/modern-desktop.aspx">Microsoft 365 Certified: Modern Desktop Administrator Associate&lt;/a>.&lt;/p>
+&lt;p>Esta ruta es nivel Associate y consta de dos exámenes para completarla, los cuales ya aparecen visibles en la pagina de &lt;a href="http://www.pearsonvue.com/microsoft/exams/">Pearson Vue&lt;/a> y tienen como fecha de programación inicial el próximo día 3 de Diciembre de 2018. Son los siguientes:&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-md-100.aspx">MD-100: Windows 10 (beta)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.microsoft.com/en-us/learning/exam-md-101.aspx">MD-101: Managing Modern Desktops (beta)&lt;/a>&lt;/p>
+&lt;p>De momento no he localizado mas información al respecto de dichos exámenes en cuanto a su contenido y los recursos disponibles de formación. Entiendo que los irán publicando en las próximas semanas.&lt;/p></description></item></channel></rss>
