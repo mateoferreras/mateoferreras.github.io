@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vmware on mateoferreras.es</title><link>https://mateoferreras.es/tags/vmware/</link><description>Recent content in Vmware on mateoferreras.es</description><generator>Hugo</generator><language>es</language><lastBuildDate>Wed, 08 Oct 2025 14:00:00 +0200</lastBuildDate><atom:link href="https://mateoferreras.es/tags/vmware/index.xml" rel="self" type="application/rss+xml"/><item><title>Rutas de certificación VMware Cloud Foundation</title><link>https://mateoferreras.es/post/2025/10/rutas-certificaciones-vcf/</link><pubDate>Wed, 08 Oct 2025 14:00:00 +0200</pubDate><guid>https://mateoferreras.es/post/2025/10/rutas-certificaciones-vcf/</guid><description>&lt;p&gt;Quiero reactivar el blog con esta entrada para dar a conocer las nuevas certificaciones de VMware by Broadcom que se presentan bajo VMware Cloud Foundation.&lt;/p&gt;
+&lt;p&gt;Broadcom ha diseñado nuevas certificaciones basadas en roles para VMware vSphere Foundation (VVF) y VMware Cloud Foundation (VCF), que progresan desde funciones de Soporte, pasando Administradores (Implementación) y finalizan en Arquitectos.&lt;/p&gt;
+&lt;p align="center"&gt;
+ &lt;img src="images/2025/10/2025-vcf-cert-paths.png" alt="Rutas certificaciones"&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uno de los cambios importantes es que ya no es obligatorio la realización de cursos oficiales de VMware para la obtención de las certificaciones, pero sigue recomendándose la realización de formaciones así como la experiencia previa a la realización del examen.&lt;/li&gt;
+&lt;li&gt;Las certificaciones son independientes entre si y se puede realizar la que mas se ajuste al funciones laborales.&lt;/li&gt;
+&lt;li&gt;Estas certificaciones van a tener fecha de expiración y una ventana de renovación de 36 meses, la renovación se realiza aprobando el examen correspondiente a la certificación.&lt;/li&gt;
+&lt;li&gt;Broadcom a fijado el precio de todos los exámenes de certificación de VMware en 250$, aproximadamente 260€ al cambio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Todavía es posible realizar exámenes de certificación de las rutas anteriores, estos se pueden encontrar en el portal (&lt;a href="https://www.broadcom.com/support/education/vmware/certification"&gt;VMware Certification&lt;/a&gt;) bajo el apartado de &lt;strong&gt;VMware Legacy Certifications&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>
